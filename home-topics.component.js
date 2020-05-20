@@ -1,13 +1,14 @@
 import React from 'react';
 
-function Topics() {
+function Topics(){
 
     const style_parent = {
         margin: '1em',
         display: 'flex',
         justifyContent: 'space-around',
         textAlign: 'center',
-        borderBottom: '1.5px solid black'
+        borderBottom: '1.5px solid black',
+        backgroundColor: 'white'
     }
 
     const style_child = {
@@ -17,10 +18,12 @@ function Topics() {
     }
 
     return(
-        <div style={style_parent}>
-            <p style={style_child}>News</p>
-            <p style={style_child}>Lifestyle</p>
-            <p style={style_child}>Fashion</p>
+        <div style={{backgroundColor:'white', position:'sticky', top:'0px'}}>
+            <div style={style_parent}>
+                <a style={style_child}>News</a>
+                <a style={style_child}>Lifestyle</a>
+                <a style={style_child}>Fashion</a>
+            </div>
         </div>
     )
 }

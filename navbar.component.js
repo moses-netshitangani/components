@@ -2,8 +2,7 @@ import React from 'react';
 import '../App.css';
 
 function Navbar(){
-    // let menu_pressed = false;
-
+    
     return(
         <nav>
             <div className="logo">

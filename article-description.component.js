@@ -6,7 +6,7 @@ function Description(){
         margin: '0.5em',
         padding: '0.25em',
         borderRadius: '3px',
-        webkitBoxShadow: '0 8px 10px -5px grey',
+        WebkitBoxShadow: '0 3px 20px -10px grey',
     }
 
     const style_content = {
@@ -16,12 +16,12 @@ function Description(){
 
     return(
         <div style={style_post}>
-            <p>topic</p>
+            <p>News</p>
             <div style={style_content}>
-                <h4 style={{ width: '70%', backgroundColor: '#a5604f'}}>Article heading</h4>
-                <div style={{height: '100%'}}>article image</div>
+                <h4 style={{ width: '70%', color:'#29292e'}}>COVID-19 PANDEMIC SOON TO END? MOST PROBABLY.</h4>
+                <div id="article-img" style={{height: '100%'}}>article image</div>
             </div>
-            <p>Brief article intro</p>
+            <p>It has been speculated that the pandemic could be near it's end. People are almost too excited.</p>
         </div>
     )
 }

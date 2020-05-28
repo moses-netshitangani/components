@@ -1,10 +1,40 @@
 import React from 'react';
+import '../App.css'
 
-export default function FullArticle(){
+function FullArticle(){
+
+    // styling
+    const style_outer = {
+        textAlign: 'center'
+    }
+
+    const style_heading = {
+        color: '#29292e'
+    }
+
+    const style_text ={
+        textAlign: 'justify',
+        padding: '1em'
+    }
 
     return(
-        <div>
-           Hey I'm a template. How do you feel about that?
+        <div style={style_outer}>
+            <h1 style={style_heading}>This is the article heading.</h1>
+            <div className="article-img">
+                This is where the article image will go.
+            </div>
+            <div>
+                <p style={style_text}>
+                    This is the content. The whole story. Nothing is left out.
+                    This is the content. The whole story. Nothing is left out.
+                    This is the content. The whole story. Nothing is left out.
+                    This is the content. The whole story. Nothing is left out.
+                    This is the content. The whole story. Nothing is left out.
+                    This is the content. The whole story. Nothing is left out.
+                </p>
+            </div>
         </div>
     )
 }
+
+export default FullArticle;

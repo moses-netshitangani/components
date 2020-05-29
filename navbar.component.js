@@ -22,26 +22,30 @@ function Navbar(){
         zIndex: '1'
     }
 
+    const style_link = {
+        textDecoration: 'none'
+    }
+
     return(
         <nav>
             <Link to="/">
                 <div className="logo">
                 </div>
             </Link>
-            <a className="burger" onClick={updateMenu}>
+            <div className="burger" onClick={updateMenu}>
                 <div className="burger-bar"></div>
                 <div className="burger-bar"></div>
                 <div className="burger-bar"></div>
-            </a>
+            </div>
             <div className='openMenu' style={style_menu}>
-                <Link to="/">
-                    <a href="" style={{ borderTop: '1px solid black' }}><h4>Home</h4></a>
+                <Link to="/" style={style_link}>
+                    <h4 style={{ borderTop: '1px solid black' }}>Home</h4>
                 </Link>
-                <Link to="/about">
-                    <a href=""><h4>About</h4></a>
+                <Link to="/about" style={style_link}>
+                    <h4>About</h4>
                 </Link>
-                <Link to="/contact">
-                    <a href=""><h4>Contact</h4></a>
+                <Link to="/contact" style={style_link}>
+                    <h4>Contact</h4>
                 </Link>
             </div>
         </nav>

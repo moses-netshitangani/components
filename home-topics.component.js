@@ -28,9 +28,9 @@ function Topics(){
     return(
         <div style={style_outer}>
             <div style={style_parent}>
-                <a style={style_child}>News</a>
-                <a style={style_child}>Lifestyle</a>
-                <a style={style_child}>Fashion</a>
+                <h4 style={style_child}>News</h4>
+                <h4 style={style_child}>Lifestyle</h4>
+                <h4 style={style_child}>Fashion</h4>
             </div>
         </div>
     )

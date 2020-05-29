@@ -34,9 +34,15 @@ function Navbar(){
                 <div className="burger-bar"></div>
             </a>
             <div className='openMenu' style={style_menu}>
-                <a href="" style={{borderTop:'1px solid black'}}><h4>Home</h4></a>
-                <a href=""><h4>About</h4></a>
-                <a href=""><h4>Contact</h4></a>
+                <Link to="/">
+                    <a href="" style={{ borderTop: '1px solid black' }}><h4>Home</h4></a>
+                </Link>
+                <Link to="/about">
+                    <a href=""><h4>About</h4></a>
+                </Link>
+                <Link to="/contact">
+                    <a href=""><h4>Contact</h4></a>
+                </Link>
             </div>
         </nav>
     )

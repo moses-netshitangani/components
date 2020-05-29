@@ -31,6 +31,8 @@ function FullArticle(){
                     This is the content. The whole story. Nothing is left out.
                     This is the content. The whole story. Nothing is left out.
                     This is the content. The whole story. Nothing is left out.
+                    This is the content. The whole story. Nothing is left out.
+                    This is the content. The whole story. Nothing is left out.
                 </p>
             </div>
         </div>

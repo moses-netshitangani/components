@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import '../App.css';
 
 function Navbar(){
@@ -14,7 +15,7 @@ function Navbar(){
         flexDirection: 'column',
         width: '50%',
         height: '283px',
-        paddingTop: '50px',
+        paddingTop: '55px',
         position: 'absolute',
         top: '0',
         right: '0',
@@ -23,8 +24,10 @@ function Navbar(){
 
     return(
         <nav>
-            <div className="logo">
-            </div>
+            <Link to="/">
+                <div className="logo">
+                </div>
+            </Link>
             <a className="burger" onClick={updateMenu}>
                 <div className="burger-bar"></div>
                 <div className="burger-bar"></div>

@@ -25,6 +25,33 @@ nav {
     z-index: 10;
 }
 
+.burger-bar.x:nth-child(1){
+    transform: rotate(45deg) translateX(0.5px) translateY(12.5px);
+    transition: ease-out 0.75s;
+}
+.burger-bar.x:nth-child(2) {
+    transform: translatex(100px);
+}
+.burger-bar.x:nth-child(3) {
+    transform: rotate(135deg) translateX(0.5px) translateY(10px);
+    transition: ease-out 0.75s;
+}
+
+.burger-bar.bars:nth-child(1) {
+    transform: rotate(0deg) translateX(0px) translateY(0);
+    transition: ease-out 0.75s;
+}
+
+.burger-bar.bars:nth-child(2) {
+    transform: translatex(0px);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.75s;
+}
+
+.burger-bar.bars:nth-child(3) {
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+    transition: ease-out 0.75s;
+}
+
 .burger-bar {
     background-color: #c93655;
     width: 70%;

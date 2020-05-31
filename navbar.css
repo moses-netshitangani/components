@@ -1,0 +1,42 @@
+nav {
+    background: linear-gradient(to right, #434343, #000000);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 65px;
+    width: 100%;
+    padding-bottom: 0.5em;
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px 5px grey;
+}
+
+.burger {
+    height: 25px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    z-index: 10;
+}
+
+.burger-bar {
+    background-color: #c93655;
+    width: 70%;
+    height: 10%;
+    margin: 0.1em;
+    border-radius: 0.25em;
+}
+
+.logo {
+    background-image: url('../imgs/profile.png');
+    background-position: center;
+    background-size: cover;
+    height: 60px;
+    width: 200px;
+}

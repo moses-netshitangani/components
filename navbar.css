@@ -4,9 +4,9 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    height: 65px;
+    height: 70px;
     width: 100%;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.75em;
     border-bottom-left-radius: 0.25em;
     border-bottom-right-radius: 0.25em;
     display: flex;
@@ -22,11 +22,18 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     align-items: left;
-    z-index: 10;
+}
+
+.burger-bar {
+    background-color: #c93655;
+    width: 70%;
+    height: 10%;
+    margin: 0.1em;
+    border-radius: 0.25em;
 }
 
 .burger-bar.x:nth-child(1){
-    transform: rotate(45deg) translateX(0.5px) translateY(12.5px);
+    transform: rotate(45deg) translateX(2.5px) translateY(12.5px);
     transition: ease-out 0.75s;
 }
 .burger-bar.x:nth-child(2) {
@@ -52,18 +59,57 @@ nav {
     transition: ease-out 0.75s;
 }
 
-.burger-bar {
-    background-color: #c93655;
-    width: 70%;
-    height: 10%;
-    margin: 0.1em;
-    border-radius: 0.25em;
-}
-
 .logo {
     background-image: url('../imgs/profile.png');
     background-position: center;
     background-size: cover;
     height: 60px;
     width: 200px;
+}
+
+.drawer{
+    height: 8em;
+    width: 100%;
+    position: relative;
+    top: 100px;
+    right: 0;
+    padding: 0.5em;
+    display: none;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b1a6a65e;
+}
+
+.drawer.long {
+    display: flex;
+    flex-direction: column;
+    animation: slide-down 0.75s;
+    transition: ease-out;
+}
+
+.drawer.short {
+    display: flex;
+    flex-direction: column;
+    animation: slide-up 0.75s;
+    transition: ease-out;
+}
+
+@keyframes slide-down{
+    from{
+        height: 0em;
+    }
+    to{
+        height: 8em;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        height: 8em;
+    }
+
+    to {
+        height: 0em;
+    }
 }

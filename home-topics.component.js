@@ -3,17 +3,18 @@ import React from 'react';
 function Topics(){
 
     const style_parent = {
-        margin: '0.5em',
+        margin: '0.75em',
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         textAlign: 'center',
         borderBottom: '1.5px solid black',
-        backgroundColor: 'white',
+        backgroundColor: 'white'
     }
 
     const style_child = {
         fontWeight: '500',
         color: 'black',
+        flex: '1',
         marginBottom: '0.5em'
     }
 
@@ -24,7 +25,7 @@ function Topics(){
         position: 'fixed',
         top: '55px',
         borderTopLeftRadius: '1em',
-        borderTopRightRadius: '1em',
+        borderTopRightRadius: '1em'
     }
 
     return(

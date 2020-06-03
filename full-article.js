@@ -5,7 +5,8 @@ function FullArticle(){
 
     // styling
     const style_outer = {
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: '7em'
     }
 
     const style_heading = {

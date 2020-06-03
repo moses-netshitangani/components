@@ -1,54 +1,67 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import '../App.css';
+import './navbar.css';
 
-function Navbar(){
+import Topics from './home-topics.component';
+
+const Navbar = props => {
     const [menu, setMenu] = useState(false);
-    const updateMenu = () => {
-        setMenu(!menu);
-    }
+    const [burger_classes, setClasses] = useState("burger-bar");
+    const [slide_classes, setSlideClasses] = useState("drawer");
     
-    let style_menu = {
-        display: menu ? 'flex' : 'none',
-        borderRadius: '5px',
-        background: 'linear-gradient(to right, #cf2f50, #f27242)',
-        flexDirection: 'column',
-        width: '50%',
-        height: '283px',
-        paddingTop: '55px',
-        position: 'absolute',
-        top: '0',
-        right: '0',
-        zIndex: '1'
+    const updateBurgerBar = menu => {
+        if (menu) {
+            console.log("entered updateBurgerBar func")
+            setClasses("burger-bar x");
+            // setMenu(!menu);
+        }
+        else {
+            console.log("exited updateBurgerBar func")
+            setClasses("burger-bar bars");
+            // setMenu(!menu);
+        }
     }
 
-    const style_link = {
-        textDecoration: 'none'
+    const updateSlide = menu => {
+        if(menu){
+            console.log("entered updateSlide func")
+            setSlideClasses("drawer long");
+        }
+        else{
+            console.log("exited updateSlide func")
+            setSlideClasses("drawer short");
+        }
+    }
+
+    const updateMenu = () => {
+        console.log("clicked burger-button with menu value of: "+menu);
+        setMenu(!menu);
+        console.log("value of menu is now: "+menu);
+        updateBurgerBar(menu);
+        updateSlide(menu);
     }
 
     return(
-        <nav>
-            <Link to="/">
-                <div className="logo">
+        <div style={{width: '100%'}}>
+            <nav>
+                <Link to="/">
+                    <div className="logo">
+                    </div>
+                </Link>
+
+                <div className="burger" onClick={updateMenu}>
+                    <div className={burger_classes}></div>
+                    <div className={burger_classes}></div>
+                    <div className={burger_classes}></div>
                 </div>
-            </Link>
-            <div className="burger" onClick={updateMenu}>
-                <div className="burger-bar"></div>
-                <div className="burger-bar"></div>
-                <div className="burger-bar"></div>
+            </nav>
+            <Topics />
+            <div className={slide_classes}>
+                <h4>Home</h4>
+                <h4>About</h4>
+                <h4>Contact</h4>
             </div>
-            <div className='openMenu' style={style_menu}>
-                <Link to="/" style={style_link}>
-                    <h4 style={{ borderTop: '1px solid black' }}>Home</h4>
-                </Link>
-                <Link to="/about" style={style_link}>
-                    <h4>About</h4>
-                </Link>
-                <Link to="/contact" style={style_link}>
-                    <h4>Contact</h4>
-                </Link>
-            </div>
-        </nav>
+        </div>
     )
 }
 

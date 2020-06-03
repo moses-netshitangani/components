@@ -5,7 +5,7 @@ import './navbar.css';
 import Topics from './home-topics.component';
 
 const Navbar = props => {
-    const [menu, setMenu] = useState(false);
+    let [menu, setMenu] = useState(false);
     const [burger_classes, setClasses] = useState("burger-bar");
     const [slide_classes, setSlideClasses] = useState("drawer");
     
@@ -35,7 +35,7 @@ const Navbar = props => {
 
     const updateMenu = () => {
         console.log("clicked burger-button with menu value of: "+menu);
-        setMenu(!menu);
+        setMenu(menu = !menu);
         console.log("value of menu is now: "+menu);
         updateBurgerBar(menu);
         updateSlide(menu);

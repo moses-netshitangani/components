@@ -68,31 +68,37 @@ nav {
 }
 
 .drawer{
-    height: 8em;
+    height: 0%;
     width: 100%;
-    position: relative;
-    top: 100px;
+    position: fixed;
+    top: 95px;
     right: 0;
-    padding: 0.5em;
-    display: none;
-    /* flex-direction: column; */
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #b1a6a65e;
+    background-color: white;
+}
+
+.drawer h4{
+    display: none;
 }
 
 .drawer.long {
-    display: flex;
-    flex-direction: column;
+    padding: 0.5em;
     animation: slide-down 0.75s;
     transition: ease-out;
+    height: 100%;
+}
+
+.drawer.long h4{
+    display: block;
+    font-weight: 500;
+    margin: 1em;
 }
 
 .drawer.short {
-    display: flex;
-    flex-direction: column;
-    animation: slide-up 0.75s;
-    transition: ease-out;
+    animation: slide-up 0.5s;
 }
 
 @keyframes slide-down{
@@ -100,13 +106,13 @@ nav {
         height: 0em;
     }
     to{
-        height: 8em;
+        height: 100%;
     }
 }
 
 @keyframes slide-up {
     from {
-        height: 8em;
+        height: 100%;
     }
 
     to {

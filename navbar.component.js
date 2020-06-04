@@ -49,9 +49,18 @@ const Navbar = props => {
             </nav>
             <Topics />
             <div className={slide_classes}>
-                <h4>Home</h4>
-                <h4>About</h4>
-                <h4>Contact</h4>
+                <Link to="/" style={{textDecoration: 'none'}}>
+                    <h4>Home</h4>
+                </Link>
+                <Link to="/admin" style={{textDecoration: 'none'}}>
+                    <h4>Admin</h4>
+                </Link>
+                <Link to="/about" style={{textDecoration: 'none'}}>
+                    <h4>About</h4>
+                </Link>
+                <Link to="/contact" style={{textDecoration: 'none'}}>
+                    <h4>Contact</h4>
+                </Link>
             </div>
         </div>
     )

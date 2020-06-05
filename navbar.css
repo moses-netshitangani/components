@@ -4,9 +4,10 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    height: 70px;
+    /* height: 70px; */
+    height: 15%;
     width: 100%;
-    padding-bottom: 0.75em;
+    padding-bottom: 1.5em;
     border-bottom-left-radius: 0.25em;
     border-bottom-right-radius: 0.25em;
     display: flex;
@@ -16,8 +17,8 @@ nav {
 }
 
 .burger {
-    height: 25px;
-    width: 40px;
+    height: 40%;
+    width: 12.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -33,14 +34,14 @@ nav {
 }
 
 .burger-bar.x:nth-child(1){
-    transform: rotate(45deg) translateX(2.5px) translateY(12.5px);
+    transform: rotate(45deg) translateX(0.05em) translateY(0.75em);
     transition: ease-out 0.75s;
 }
 .burger-bar.x:nth-child(2) {
-    transform: translatex(100px);
+    transform: translatex(10em);
 }
 .burger-bar.x:nth-child(3) {
-    transform: rotate(135deg) translateX(0.5px) translateY(10px);
+    transform: rotate(135deg) translateX(0.05em) translateY(0.65em);
     transition: ease-out 0.75s;
 }
 
@@ -63,15 +64,15 @@ nav {
     background-image: url('../imgs/profile.png');
     background-position: center;
     background-size: cover;
-    height: 60px;
-    width: 200px;
+    height: 3em;
+    width: 10em;
 }
 
 .drawer{
     height: 0%;
     width: 100%;
     position: fixed;
-    top: 95px;
+    top: 16.75%;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -99,11 +100,12 @@ nav {
 
 .drawer.short {
     animation: slide-up 0.5s;
+    transition: ease-in;
 }
 
 @keyframes slide-down{
     from{
-        height: 0em;
+        height: 0%;
     }
     to{
         height: 100%;
@@ -116,6 +118,6 @@ nav {
     }
 
     to {
-        height: 0em;
+        height: 0%;
     }
 }

@@ -49,16 +49,16 @@ const Navbar = props => {
             </nav>
             <Topics />
             <div className={slide_classes}>
-                <Link to="/" style={{textDecoration: 'none'}}>
+                <Link to="/" style={{textDecoration: 'none'}} onClick={updateMenu}>
                     <h4>Home</h4>
                 </Link>
-                <Link to="/admin" style={{textDecoration: 'none'}}>
+                <Link to="/admin" style={{textDecoration: 'none'}} onClick={updateMenu}>
                     <h4>Admin</h4>
                 </Link>
-                <Link to="/about" style={{textDecoration: 'none'}}>
+                <Link to="/about" style={{textDecoration: 'none'}} onClick={updateMenu}>
                     <h4>About</h4>
                 </Link>
-                <Link to="/contact" style={{textDecoration: 'none'}}>
+                <Link to="/contact" style={{textDecoration: 'none'}} onClick={updateMenu}>
                     <h4>Contact</h4>
                 </Link>
             </div>

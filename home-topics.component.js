@@ -3,7 +3,7 @@ import React from 'react';
 function Topics(){
 
     const style_parent = {
-        margin: '0.75em',
+        margin: '0.7em',
         display: 'flex',
         justifyContent: 'space-between',
         textAlign: 'center',
@@ -20,10 +20,10 @@ function Topics(){
 
     const style_outer = {
         width: '100%',
-        height: '40px',
+        height: '7.5%',
         backgroundColor: 'white',
         position: 'fixed',
-        top: '55px',
+        top: '10%',
         borderTopLeftRadius: '1em',
         borderTopRightRadius: '1em'
     }

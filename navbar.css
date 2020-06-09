@@ -17,8 +17,9 @@ nav {
 }
 
 .burger {
-    height: 40%;
-    width: 12.5%;
+    height: 25px;
+    /* width: 12.5%; */
+    width: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -29,20 +30,20 @@ nav {
     background-color: #c93655;
     width: 70%;
     height: 10%;
-    margin: 0.1em;
-    border-radius: 0.25em;
+    margin: 0.5px 0.1px;
+    border-radius: 5px;
 }
 
 .burger-bar.x:nth-child(1){
-    transform: rotate(45deg) translateX(0.05em) translateY(0.75em);
-    transition: ease-out 0.75s;
+    transform: rotate(45deg) translateX(1.85px) translateY(12px);
+    transition: ease-out 0.5s;
 }
 .burger-bar.x:nth-child(2) {
-    transform: translatex(10em);
+    transform: translatex(160px);
 }
 .burger-bar.x:nth-child(3) {
-    transform: rotate(135deg) translateX(0.05em) translateY(0.65em);
-    transition: ease-out 0.75s;
+    transform: rotate(135deg) translateX(0.05px) translateY(10px);
+    transition: ease-out 0.5s;
 }
 
 .burger-bar.bars:nth-child(1) {

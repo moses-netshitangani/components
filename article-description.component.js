@@ -6,9 +6,10 @@ function Description(){
     const style_post = {
         margin: '0.5em',
         padding: '0.25em',
-        minHeight: '160px',
-        borderRadius: '3px',
-        WebkitBoxShadow: '0 3px 20px -10px grey',
+        minHeight: '10em',
+        borderRadius: '0.188em',
+        WebkitBoxShadow: '0 0.188em 1.250em -0.625em grey',
+        color: '#313030'
     }
 
     const style_content = {
@@ -18,7 +19,7 @@ function Description(){
 
     return(
         <Link to="/article" style={{textDecoration:'none'}}>
-            <div style={{margin: '7em 0'}}>
+            <div style={{margin: '8em 0'}}>
 
                 <div style={style_post}>
                     <p>News</p>
@@ -27,15 +28,6 @@ function Description(){
                         <div id="article-img" style={{ height: '100%' }}>article image</div>
                     </div>
                     <p>It has been speculated that the pandemic could be near it's end. People are almost too excited.</p>
-                </div>
-                
-                <div style={style_post}>
-                    <p>News</p>
-                    <div style={style_content}>
-                        <h4 style={{ width: '70%', color: '#29292e' }}>POLICE BRUTALITY AGAINST BLACKS</h4>
-                        <div id="article-img" style={{ height: '100%' }}>article image</div>
-                    </div>
-                    <p>It's not okay. Really isn't.</p>
                 </div>
                 
                 <div style={style_post}>
@@ -54,6 +46,15 @@ function Description(){
                         <div id="article-img" style={{ height: '100%' }}>article image</div>
                     </div>
                     <p>It has been speculated that the pandemic could be near it's end. People are almost too excited.</p>
+                </div>
+
+                <div style={style_post}>
+                    <p>News</p>
+                    <div style={style_content}>
+                        <h4 style={{ width: '70%', color: '#29292e' }}>POLICE BRUTALITY AGAINST BLACKS</h4>
+                        <div id="article-img" style={{ height: '100%' }}>article image</div>
+                    </div>
+                    <p>It's not okay. Really isn't.</p>
                 </div>
                 
                 <div style={style_post}>

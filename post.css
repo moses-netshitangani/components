@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+h1{
+    margin: 15px;
+}
+
+.form{
+    display: block;
+    text-align: center;
+}
+
+#author, #date, #title, #content{
+    border: 1.5px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0.188em 1.25em -0.5em grey;
+    display: block;
+    width: 80%;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+#content{
+    min-height: 150px;
+}
+

@@ -4,23 +4,18 @@ import './post.css';
 function Post(){
 
     return(
-        <div style={{minHeight: '100vh', backgroundColor: 'teal', marginTop: '10em'}}>
+        <div className='form'>
+            <h1>Write a Post</h1>
             <form>
                 {/* author name & date of post */}
                 <div className='post-details'>
-                    <label>
-                        Author:
-                        <input type='text' name='author' id='author' />
-                    </label>
-                    <label>
-                        Date(Year Month Day):
-                        <input type='text' name='date' id='date' />
-                    </label>
+                    <input type='text' name='author' placeholder='Author' id='author' />
+                    <input type='text' name='date' placeholder='Date (Year Month Day)' id='date' />
                 </div>
 
                 {/* post title, image & and the post content */}
-                <input type='text' name='title' id='title'/>
-                <textarea name="content" id='content'></textarea>
+                <input type='text' name='title' placeholder='Title' id='title'/>
+                <textarea name="content" placeholder='Content' id='content'></textarea>
                 <input type='file' name='image' id='image'/>
                 
             </form>

@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './article.css';
 
 function FullArticle(){
 
+    // Some components scroll to the middle of the page
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+    
     // styling
     const style_outer = {
         textAlign: 'center',

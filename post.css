@@ -8,11 +8,13 @@ h1{
 }
 
 .form{
+    min-height: 100vh;
+    margin-top: 7em;
     display: block;
     text-align: center;
 }
 
-#author, #date, #title, #content{
+#author, #date, #title, #category, #content{
     border: 1.5px solid white;
     border-radius: 10px;
     box-shadow: 0 0.188em 1.25em -0.5em grey;
@@ -26,3 +28,22 @@ h1{
     min-height: 150px;
 }
 
+#image{
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 15px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+}
+
+#submit-button{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    height: 30px;
+    color: white;
+    background-color: #c93655;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1.5px solid white;
+}

@@ -6,7 +6,7 @@ function Post(){
     
     // Some components scroll to the middle of the page
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo(0, 0);
     });
 
     // states for acquiring blog post values
@@ -61,7 +61,7 @@ function Post(){
                 <input type="text" placeholder='Category' onChange={setCategory} id='category' />
                 <textarea name="content" placeholder='Content' onChange={changeContent} id='content'></textarea>
                 <input type='file' name='image' id='image'/>
-                
+                <input type='submit' id='submit-button'/>
             </form>
         </div>
     )

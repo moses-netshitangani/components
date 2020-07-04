@@ -1,6 +1,7 @@
 import React,  {useEffect} from 'react';
 import './post.css';
 import { useState } from 'react';
+const axios = require('axios');
 
 function Post(){
     
@@ -35,9 +36,20 @@ function Post(){
 
     // Submitting post to server
     const onSubmit = e => {
-        e.preventDefault();
-        console.log("author is: "+author);
-        console.log("title is: " + title);
+        // e.preventDefault();
+        
+        // post object
+        const post = {
+            author: author,
+            date: new Date(date),
+            title: title,
+            category: category,
+            content: content
+        }
+
+        axios.post('http://localhost:3000/articles/add', post)
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
 
         setAuthor('');
         setContent('');
@@ -58,7 +70,7 @@ function Post(){
 
                 {/* post title, category, content and image */}
                 <input type='text' name='title' placeholder='Title' onChange={changeTitle} id='title'/>
-                <input type="text" placeholder='Category' onChange={setCategory} id='category' />
+                <input type="text" placeholder='Category' onChange={changeCategory} id='category' />
                 <textarea name="content" placeholder='Content' onChange={changeContent} id='content'></textarea>
                 <input type='file' name='image' id='image'/>
                 <input type='submit' id='submit-button'/>

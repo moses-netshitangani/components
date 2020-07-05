@@ -6,7 +6,7 @@ function Description(){
 
     useEffect(() => {
         // Some components scroll to the middle of the page
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
 
         // fetch all articles from the server
         // later to use the .env to store urls
@@ -17,13 +17,10 @@ function Description(){
                 }
             })
             .catch(err => console.log(err)); 
-    });
+    }, []);
     
     // function to do magic
     let [data, changeData] = useState([]);
-    let [category, changeCategory] = useState('');
-    let [title, changeTitle] = useState('');
-    let [brief, changeBrief] = useState('');
 
     // styling for post
     const style_post = {
@@ -40,38 +37,25 @@ function Description(){
         justifyContent: 'space-between'
     }
 
-    // variable to hold all the content. has to use useState
-    // let all_content = (
-        // <div style={style_post}>
-        //     <p>{category}</p>
-        //     <div style={style_content}>
-        //         <h4 style={{ width: '70%', color: '#29292e' }}>{title}</h4>
-        //         <div id="article-img" style={{ height: '100%' }}>article image</div>
-        //     </div>
-        //     <p>{brief}</p>
-        // </div>
-    //     );
-    let all_content = [1,2,3];
-
     return(
-        <Link to="/article" style={{textDecoration:'none'}}>
             <div style={{margin: '8em 0'}}>
                 
-                {data.map((article, k) =>{
+                {data.map((article, key) =>{
                     return (
-                        <div style={style_post}>
-                            <p>{article.category}</p>
-                            <div style={style_content}>
-                                <h4 style={{ width: '70%', color: '#29292e' }}>{article.title}</h4>
-                                <div id="article-img" style={{ height: '100%' }}>article image</div>
+                        <Link to={`/article/${article._id}`} style={{textDecoration:'none'}} key={key}>
+                            <div style={style_post}>
+                                <p>{article.category}</p>
+                                <div style={style_content}>
+                                    <h4 style={{ width: '70%', color: '#29292e' }}>{article.title}</h4>
+                                    <div id="article-img" style={{ height: '100%' }}>article image</div>
+                                </div>
+                                <p>{article.brief}</p>
                             </div>
-                            <p>{article.brief}</p>
-                        </div>
+                        </Link>
                     )
                 })}
                 
             </div>
-        </Link>
     )
 }
 

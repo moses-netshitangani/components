@@ -1,16 +1,31 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
+const axios = require('axios');
 
 function Description(){
 
-    // Some components scroll to the middle of the page
     useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+        // Some components scroll to the middle of the page
+        window.scrollTo(0, 0);
 
+        // fetch all articles from the server
+        // later to use the .env to store urls
+        axios.get("http://localhost:3000/articles")
+            .then(res => {
+                if (res.data.length > 0) {
+                    changeData(res.data);
+                }
+            })
+            .catch(err => console.log(err)); 
+    });
+    
+    // function to do magic
+    let [data, changeData] = useState([]);
+    let [category, changeCategory] = useState('');
+    let [title, changeTitle] = useState('');
+    let [brief, changeBrief] = useState('');
+
+    // styling for post
     const style_post = {
         margin: '0.5em',
         padding: '0.25em',
@@ -25,72 +40,36 @@ function Description(){
         justifyContent: 'space-between'
     }
 
+    // variable to hold all the content. has to use useState
+    // let all_content = (
+        // <div style={style_post}>
+        //     <p>{category}</p>
+        //     <div style={style_content}>
+        //         <h4 style={{ width: '70%', color: '#29292e' }}>{title}</h4>
+        //         <div id="article-img" style={{ height: '100%' }}>article image</div>
+        //     </div>
+        //     <p>{brief}</p>
+        // </div>
+    //     );
+    let all_content = [1,2,3];
+
     return(
         <Link to="/article" style={{textDecoration:'none'}}>
             <div style={{margin: '8em 0'}}>
-
-                <div style={style_post}>
-                    <p>News</p>
-                    <div style={style_content}>
-                        <h4 style={{ width: '70%', color: '#29292e' }}>COVID-19 PANDEMIC SOON TO END? MOST PROBABLY.</h4>
-                        <div id="article-img" style={{ height: '100%' }}>article image</div>
-                    </div>
-                    <p>It has been speculated that the pandemic could be near it's end. People are almost too excited.</p>
-                </div>
                 
-                <div style={style_post}>
-                    <p>Sports</p>
-                    <div style={style_content}>
-                        <h4 style={{ width: '70%', color: '#29292e' }}>MANCHESTER CITY PLAYERS RETURN TO TRAINING.</h4>
-                        <div id="article-img" style={{ height: '100%' }}>article image</div>
-                    </div>
-                    <p>Yup, the champions have returned to training. Following their UEFA ban, blah blah.</p>
-                </div>
+                {data.map((article, k) =>{
+                    return (
+                        <div style={style_post}>
+                            <p>{article.category}</p>
+                            <div style={style_content}>
+                                <h4 style={{ width: '70%', color: '#29292e' }}>{article.title}</h4>
+                                <div id="article-img" style={{ height: '100%' }}>article image</div>
+                            </div>
+                            <p>{article.brief}</p>
+                        </div>
+                    )
+                })}
                 
-                <div style={style_post}>
-                    <p>News</p>
-                    <div style={style_content}>
-                        <h4 style={{ width: '70%', color: '#29292e' }}>COVID-19 PANDEMIC SOON TO END? MOST PROBABLY.</h4>
-                        <div id="article-img" style={{ height: '100%' }}>article image</div>
-                    </div>
-                    <p>It has been speculated that the pandemic could be near it's end. People are almost too excited.</p>
-                </div>
-
-                <div style={style_post}>
-                    <p>News</p>
-                    <div style={style_content}>
-                        <h4 style={{ width: '70%', color: '#29292e' }}>POLICE BRUTALITY AGAINST BLACKS</h4>
-                        <div id="article-img" style={{ height: '100%' }}>article image</div>
-                    </div>
-                    <p>It's not okay. Really isn't.</p>
-                </div>
-                
-                <div style={style_post}>
-                    <p>News</p>
-                    <div style={style_content}>
-                        <h4 style={{ width: '70%', color: '#29292e' }}>COVID-19 PANDEMIC SOON TO END? MOST PROBABLY.</h4>
-                        <div id="article-img" style={{ height: '100%' }}>article image</div>
-                    </div>
-                    <p>It has been speculated that the pandemic could be near it's end. People are almost too excited.</p>
-                </div>
-                
-                <div style={style_post}>
-                    <p>News</p>
-                    <div style={style_content}>
-                        <h4 style={{ width: '70%', color: '#29292e' }}>COVID-19 PANDEMIC SOON TO END? MOST PROBABLY.</h4>
-                        <div id="article-img" style={{ height: '100%' }}>article image</div>
-                    </div>
-                    <p>It has been speculated that the pandemic could be near it's end. People are almost too excited.</p>
-                </div>
-                
-                <div style={style_post}>
-                    <p>News</p>
-                    <div style={style_content}>
-                        <h4 style={{ width: '70%', color: '#29292e' }}>COVID-19 PANDEMIC SOON TO END? MOST PROBABLY.</h4>
-                        <div id="article-img" style={{ height: '100%' }}>article image</div>
-                    </div>
-                    <p>It has been speculated that the pandemic could be near it's end. People are almost too excited.</p>
-                </div>
             </div>
         </Link>
     )

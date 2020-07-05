@@ -16,27 +16,18 @@ function Post(){
     let [date, setDate] = useState('');
     let [content, setContent] = useState('');
     let [category, setCategory] = useState('');
+    let [brief, setBrief] = useState('');
 
     // methods encapsulating state change
-    let changeAuthor = e => {
-        setAuthor(e.target.value);
-    }
-    let changeTitle = e => {
-        setTitle(e.target.value);
-    }
-    let changeDate = e => {
-        setDate(e.target.value);
-    }
-    let changeContent = e => {
-        setContent(e.target.value);
-    }
-    let changeCategory = e => {
-        setCategory(e.target.value);
-    }
+    let changeAuthor = e => setAuthor(e.target.value);
+    let changeTitle = e => setTitle(e.target.value);
+    let changeDate = e => setDate(e.target.value);
+    let changeContent = e => setContent(e.target.value);
+    let changeCategory = e => setCategory(e.target.value);
+    let changeBrief = e => setBrief(e.target.value);
 
     // Submitting post to server
     const onSubmit = e => {
-        // e.preventDefault();
         
         // post object
         const post = {
@@ -44,8 +35,11 @@ function Post(){
             date: new Date(date),
             title: title,
             category: category,
+            brief: brief,
             content: content
         }
+
+        console.log(post);
 
         axios.post('http://localhost:3000/articles/add', post)
             .then(res => console.log(res))
@@ -55,7 +49,9 @@ function Post(){
         setContent('');
         setDate('');
         setTitle('');
+        setBrief('');
 
+        window.location = '/';
     }
 
     return(
@@ -71,6 +67,7 @@ function Post(){
                 {/* post title, category, content and image */}
                 <input type='text' name='title' placeholder='Title' onChange={changeTitle} id='title'/>
                 <input type="text" placeholder='Category' onChange={changeCategory} id='category' />
+                <textarea name="brief" placeholder='brief' onChange={changeBrief} id="brief" />
                 <textarea name="content" placeholder='Content' onChange={changeContent} id='content'></textarea>
                 <input type='file' name='image' id='image'/>
                 <input type='submit' id='submit-button'/>

@@ -1,26 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {Link} from 'react-router-dom';
-const axios = require('axios');
+import {BlogContext} from './blog-context';
 
 function Description(){
+    // acquiring data from BlogContext component
+    const data = useContext(BlogContext);
 
     useEffect(() => {
         // Some components scroll to the middle of the page
         // window.scrollTo(0, 0);
-
-        // fetch all articles from the server
-        // later to use the .env to store urls
-        axios.get("http://localhost:3000/articles")
-            .then(res => {
-                if (res.data.length > 0) {
-                    changeData(res.data);
-                }
-            })
-            .catch(err => console.log(err)); 
+        
     }, []);
-    
-    // function to do magic
-    let [data, changeData] = useState([]);
 
     // styling for post
     const style_post = {
@@ -34,7 +24,8 @@ function Description(){
 
     const style_content = {
         display: 'flex',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        margin: '0.25em 0'
     }
 
     return(
@@ -44,12 +35,12 @@ function Description(){
                     return (
                         <Link to={`/article/${article._id}`} style={{textDecoration:'none'}} key={key}>
                             <div style={style_post}>
-                                <p>{article.category}</p>
+                                <p style={{fontSize: '0.85em'}}>{article.category}</p>
                                 <div style={style_content}>
                                     <h4 style={{ width: '70%', color: '#29292e' }}>{article.title}</h4>
                                     <div id="article-img" style={{ height: '100%' }}>article image</div>
                                 </div>
-                                <p>{article.brief}</p>
+                                <p style={{fontSize: '0.85em'}}>{article.brief}</p>
                             </div>
                         </Link>
                     )

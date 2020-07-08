@@ -1,6 +1,6 @@
 nav {
     background: linear-gradient(to right, #434343, #000000);
-    text-align: center;
+    /* text-align: center; */
     position: fixed;
     top: 0;
     right: 0;
@@ -13,13 +13,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 3px 8px 5px grey;
 }
 
 .burger {
     height: 25px;
-    /* width: 12.5%; */
     width: 40px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -61,12 +60,19 @@ nav {
     transition: ease-out 0.75s;
 }
 
+.logo-cover{
+    height: 3em;
+    width: 10em;
+    margin: 0;
+}
+
 .logo {
     background-image: url('../imgs/profile.png');
     background-position: center;
     background-size: cover;
-    height: 3em;
-    width: 10em;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .drawer{

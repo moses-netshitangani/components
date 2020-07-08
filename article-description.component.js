@@ -14,18 +14,20 @@ function Description(){
 
     // styling for post
     const style_post = {
-        margin: '0.5em',
+        position: 'relative',
+        margin: '1.25em 0.5em',
         padding: '0.25em',
-        minHeight: '10em',
+        height: '10em',
         borderRadius: '0.188em',
-        WebkitBoxShadow: '0 0.188em 1.250em -0.625em grey',
-        color: '#313030'
+        boxShadow: '0 0.188em 1.550em -0.525em grey',
+        color: '#313030',
+        overflow: 'hidden'
     }
 
     const style_content = {
         display: 'flex',
         justifyContent: 'space-between',
-        margin: '0.25em 0'
+        margin: '0.5em 0 0.9em 0'
     }
 
     return(
@@ -33,16 +35,17 @@ function Description(){
                 
                 {data.map((article, key) =>{
                     return (
-                        <Link to={`/article/${article._id}`} style={{textDecoration:'none'}} key={key}>
-                            <div style={style_post}>
-                                <p style={{fontSize: '0.85em'}}>{article.category}</p>
+                        <div style={style_post} key={key}>
+                            <Link to={`/article/${article._id}`} style={{textDecoration:'none'}} key={article._id}>
+
+                                <p style={{fontSize: '0.75em'}}>{article.category}</p>
                                 <div style={style_content}>
                                     <h4 style={{ width: '70%', color: '#29292e' }}>{article.title}</h4>
                                     <div id="article-img" style={{ height: '100%' }}>article image</div>
                                 </div>
-                                <p style={{fontSize: '0.85em'}}>{article.brief}</p>
-                            </div>
-                        </Link>
+                                <p style={{fontSize: '0.85em'}}>{article.content}</p>
+                            </Link>
+                        </div>
                     )
                 })}
                 

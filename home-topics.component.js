@@ -3,7 +3,7 @@ import React from 'react';
 function Topics(){
 
     const style_parent = {
-        margin: '0.7em',
+        margin: '0.9em',
         display: 'flex',
         justifyContent: 'space-between',
         textAlign: 'center',

@@ -8,30 +8,38 @@ function Description(){
 
     useEffect(() => {
         // Some components scroll to the middle of the page
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         
     }, []);
 
-    // styling for post
+    // styling for post container
     const style_post = {
-        position: 'relative',
-        margin: '1.25em 0.5em',
+        margin: '5% 2%',
         padding: '0.25em',
-        height: '10em',
+        height: '9em',
         borderRadius: '0.188em',
         boxShadow: '0 0.188em 1.550em -0.525em grey',
         color: '#313030',
-        overflow: 'hidden'
     }
 
+    // styling for title and display image
     const style_content = {
         display: 'flex',
         justifyContent: 'space-between',
-        margin: '0.5em 0 0.9em 0'
+        margin: '0.5em 0 0.5em 0'
+    }
+
+    // styling for the article brief
+    const style_p = {
+        fontSize: '0.85em',
+        display: '-webkit-box',
+        webkitLineClamp: '3',
+        webkitBoxOrient: 'vertical',
+        overflow: 'hidden'
     }
 
     return(
-            <div style={{margin: '8em 0'}}>
+            <div style={{margin: '40% 0'}}>
                 
                 {data.map((article, key) =>{
                     return (
@@ -40,10 +48,10 @@ function Description(){
 
                                 <p style={{fontSize: '0.75em'}}>{article.category}</p>
                                 <div style={style_content}>
-                                    <h4 style={{ width: '70%', color: '#29292e' }}>{article.title}</h4>
+                                    <h5 style={{ width: '70%', color: '#29292e', margin: '0' }}>{article.title}</h5>
                                     <div id="article-img" style={{ height: '100%' }}>article image</div>
                                 </div>
-                                <p style={{fontSize: '0.85em'}}>{article.content}</p>
+                                <p style={style_p}>{article.content}</p>
                             </Link>
                         </div>
                     )

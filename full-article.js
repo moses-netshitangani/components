@@ -13,7 +13,7 @@ function FullArticle(){
 
         // Obtaining article id for display
         let id = window.location.href;
-        id = id.substring(id.lastIndexOf("/")+1);
+        id = id.substring(id.lastIndexOf("/") + 1);
 
         // searching data for article matching id
         let match = data.filter(article => {
@@ -22,8 +22,6 @@ function FullArticle(){
         changePost(match);
         
     }, []);
-
-    console.log(post.title);
     
     // styling
     const style_outer = {
@@ -32,30 +30,28 @@ function FullArticle(){
     }
 
     const style_heading = {
-        color: '#29292e'
+        color: '#29292e',
+        margin: '1em 0'
     }
 
     const style_text ={
         textAlign: 'justify',
-        padding: '1em'
+        padding: '1.25em 0.75em'
     }
 
     return(
         <div style={style_outer}>
-            <h1 style={style_heading}>hey</h1>
+            <h2 style={style_heading}>{post.length ? post[0].title : ''}</h2>
             <div className="article-img">
                 This is where the article image will go.
             </div>
+            <div className='author-date'>
+                <p><i>{post.length ? `by ${post[0].author}` : ''}</i></p>
+                <p><i>{post.length ? post[0].date : ''}</i></p>
+            </div>
             <div>
                 <p style={style_text}>
-                    This is the content. The whole story. Nothing is left out.
-                    This is the content. The whole story. Nothing is left out.
-                    This is the content. The whole story. Nothing is left out.
-                    This is the content. The whole story. Nothing is left out.
-                    This is the content. The whole story. Nothing is left out.
-                    This is the content. The whole story. Nothing is left out.
-                    This is the content. The whole story. Nothing is left out.
-                    This is the content. The whole story. Nothing is left out.
+                    {post.length ? post[0].content : 'Refresh page'}
                 </p>
             </div>
         </div>

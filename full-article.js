@@ -36,7 +36,8 @@ function FullArticle(){
 
     const style_text ={
         textAlign: 'justify',
-        padding: '1.25em 0.75em'
+        padding: '1.25em 0.75em',
+        whiteSpace: 'pre-line'
     }
 
     return(

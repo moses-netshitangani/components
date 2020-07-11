@@ -1,11 +1,9 @@
 import React, {useEffect, useState, useContext} from 'react';
-import {BlogContext} from './blog-context';
+import axios from 'axios';
 import './article.css';
 
 function FullArticle(){
-    // acquiring data from BlogContext component
-    const data = useContext(BlogContext);
-    let [post, changePost] = useState([]);
+    let [post, changePost] = useState({});
 
     useEffect(() => {
         // Some components scroll to the middle of the page
@@ -15,11 +13,14 @@ function FullArticle(){
         let id = window.location.href;
         id = id.substring(id.lastIndexOf("/") + 1);
 
-        // searching data for article matching id
-        let match = data.filter(article => {
-            return article._id === id;
-        });
-        changePost(match);
+        // fetch specific article using id
+        axios.get(`http://localhost:3000/articles/${id}`)
+            .then(res => {
+                if(res != undefined){
+                    changePost(res.data);
+                }
+            })
+            .catch(err => console.log(err));
         
     }, []);
     
@@ -30,30 +31,36 @@ function FullArticle(){
     }
 
     const style_heading = {
+        textAlign: 'left',
         color: '#29292e',
-        margin: '1em 0'
+        margin: '1em 0.25em',
+        fontWeight: '900'
     }
 
     const style_text ={
-        textAlign: 'justify',
-        padding: '1.25em 0.75em',
-        whiteSpace: 'pre-line'
+        textAlign: 'left',
+        padding: '1.25em 0.5em',
+        whiteSpace: 'pre-line',
+        lineHeight: '1.5em',
+        color: '#555'
     }
 
     return(
         <div style={style_outer}>
-            <h2 style={style_heading}>{post.length ? post[0].title : ''}</h2>
-            <div className="article-img">
-                This is where the article image will go.
-            </div>
+
+            <h2 style={style_heading}>{post.title}</h2>
+
             <div className='author-date'>
-                <p><i>{post.length ? `by ${post[0].author}` : ''}</i></p>
-                <p><i>{post.length ? post[0].date : ''}</i></p>
+                <p><i>{`by ${post.author} / `}</i></p>
+                <p><i>{post.date}</i></p>
             </div>
+
+            <div className="article-img">
+                
+            </div>
+            
             <div>
-                <p style={style_text}>
-                    {post.length ? post[0].content : 'Refresh page'}
-                </p>
+                <p style={style_text}>{post.content}</p>
             </div>
         </div>
     )

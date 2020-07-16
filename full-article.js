@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useContext} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './article.css';
 
@@ -16,7 +16,7 @@ function FullArticle(){
         // fetch specific article using id
         axios.get(`http://localhost:3000/articles/${id}`)
             .then(res => {
-                if(res != undefined){
+                if(res !== undefined){
                     changePost(res.data);
                 }
             })
@@ -27,7 +27,11 @@ function FullArticle(){
     // styling
     const style_outer = {
         textAlign: 'center',
-        marginTop: '7em'
+        marginTop: '6em',
+        paddingTop: '0.5em',
+        backgroundColor: 'white',
+        borderTopLeftRadius: '10px',
+        borderTopRightRadius: '10px'
     }
 
     const style_heading = {
@@ -42,7 +46,7 @@ function FullArticle(){
         padding: '1.25em 0.5em',
         whiteSpace: 'pre-line',
         lineHeight: '1.5em',
-        color: '#555'
+        color: 'rgb(69, 68, 68)'
     }
 
     return(

@@ -67,7 +67,7 @@ const Navbar = props => {
                     <h4>Admin</h4>
                 </Link>
                 <Link to="/about" style={{textDecoration: 'none'}} onClick={updateMenu}>
-                    <h4>About</h4>
+                    <h4>About Me</h4>
                 </Link>
                 <Link to="/contact" style={{textDecoration: 'none'}} onClick={updateMenu}>
                     <h4>Contact</h4>

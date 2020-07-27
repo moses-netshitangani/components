@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Topics(){
 
@@ -31,9 +32,15 @@ function Topics(){
     return(
         <div style={style_outer}>
             <div style={style_parent}>
+            <Link to="/News">
                 <h4 style={style_child}>News</h4>
+            </Link>
+            <Link to="/Lifestyle">
                 <h4 style={style_child}>Lifestyle</h4>
+            </Link>
+            <Link to="Fashion">
                 <h4 style={style_child}>Fashion</h4>
+            </Link>
             </div>
         </div>
     )

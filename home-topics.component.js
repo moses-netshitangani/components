@@ -5,7 +5,7 @@ function Topics(){
 
     // styling for outer container
     const style_parent = {
-        margin: '0.9em',
+        margin: '0.9em 0.5em',
         display: 'flex',
         justifyContent: 'space-between',
         textAlign: 'center',

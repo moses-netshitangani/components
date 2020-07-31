@@ -5,7 +5,7 @@ function Topics(){
 
     // styling for outer container
     const style_parent = {
-        margin: '0.9em 0.5em',
+        margin: '5.75% 3.5%',
         display: 'flex',
         justifyContent: 'space-between',
         textAlign: 'center',
@@ -18,13 +18,13 @@ function Topics(){
         fontWeight: '500',
         color: 'black',
         flex: '1',
-        marginBottom: '0.5em'
+        marginBottom: '17.5%'
     }
 
     // styling for main container div
     const style_outer = {
         width: '100%',
-        height: '7.5%',
+        height: '8.5%',
         backgroundColor: 'white',
         position: 'fixed',
         top: '10%',

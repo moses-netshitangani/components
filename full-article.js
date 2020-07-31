@@ -28,32 +28,29 @@ function FullArticle(){
     // styling
     const style_outer = {
         textAlign: 'center',
-        marginTop: '6em',
-        paddingTop: '0.5em',
-        backgroundColor: 'white',
-        borderTopLeftRadius: '10px',
-        borderTopRightRadius: '10px'
+        marginTop: '25%',
+        paddingTop: '5%',
+        backgroundColor: 'white'
     }
 
     const style_heading = {
         textAlign: 'left',
         color: '#29292e',
-        margin: '1em 0.25em',
-        fontWeight: '900'
+        margin: '7.5% 5% 2% 5%',
     }
 
     const style_text ={
         textAlign: 'left',
-        padding: '1.25em 0.8em',
+        padding: '10% 5%',
         whiteSpace: 'pre-line',
-        lineHeight: '1.5em',
+        lineHeight: '175%',
         color: 'rgb(75, 80, 80)'
     }
 
     return(
         <div style={style_outer}>
 
-            <h2 style={style_heading}>{post.title}</h2>
+            <h1 style={style_heading}>{post.title}</h1>
 
             <div className='author-date'>
                 <p><i>{`by ${post.author} / `}</i></p>

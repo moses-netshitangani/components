@@ -10,7 +10,7 @@
     background-image: url('../imgs/cover.png');
     background-position: center;
     background-size: cover;
-    height: 11.25em;
+    height: 12em;
     border: 2px solid salmon;
     margin: 0.5em 0;
 }
@@ -19,6 +19,7 @@
     display: flex;
     justify-content: flex-start;
     font-size: smaller;
+    margin: 2% 5%;
 }
 
 .author-date p{

@@ -3,6 +3,7 @@ import axios from 'axios';
 import './article.css';
 
 function FullArticle(){
+
     let [post, changePost] = useState({});
 
     useEffect(() => {
@@ -14,7 +15,7 @@ function FullArticle(){
         id = id.substring(id.lastIndexOf("/") + 1);
 
         // fetch specific article using id
-        axios.get(`http://localhost:3000/articles/${id}`)
+        axios.get(`http://localhost:3000/articles/single/${id}`)
             .then(res => {
                 if(res !== undefined){
                     changePost(res.data);
@@ -43,10 +44,10 @@ function FullArticle(){
 
     const style_text ={
         textAlign: 'left',
-        padding: '1.25em 0.5em',
+        padding: '1.25em 0.8em',
         whiteSpace: 'pre-line',
         lineHeight: '1.5em',
-        color: 'rgb(69, 68, 68)'
+        color: 'rgb(75, 80, 80)'
     }
 
     return(
@@ -59,8 +60,7 @@ function FullArticle(){
                 <p><i>{post.date}</i></p>
             </div>
 
-            <div className="article-img">
-                
+            <div className="article-img">   
             </div>
             
             <div>

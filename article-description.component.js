@@ -8,8 +8,7 @@ function Description(){
 
     useEffect(() => {
         // Some components scroll to the middle of the page
-        window.scrollTo(0, 0);
-        
+        window.scrollTo(0, 0); 
     }, []);
 
     // styling for post container
@@ -29,13 +28,23 @@ function Description(){
         margin: '0.5em 0 0.5em 0'
     }
 
+    const style_title = {
+        display: '-webkit-box',
+        WebkitLineClamp: '3',
+        WebkitBoxOrient: 'vertical',
+        overflow: 'hidden'
+    }
+
     // styling for the article brief
     const style_p = {
         fontSize: '0.85em',
         display: '-webkit-box',
-        webkitLineClamp: '3',
-        webkitBoxOrient: 'vertical',
-        overflow: 'hidden'
+        WebkitLineClamp: '3',
+        WebkitBoxOrient: 'vertical',
+        overflow: 'hidden',
+        width: '70%',
+        color: '#29292e',
+        margin: '0'
     }
 
     return(
@@ -43,17 +52,16 @@ function Description(){
                 
                 {data.map((article, key) =>{
                     return (
-                        <div style={style_post} key={key}>
-                            <Link to={`/article/${article._id}`} style={{textDecoration:'none'}} key={article._id}>
-
+                        <Link to={`/articles/single/${article._id}`} style={{textDecoration:'none'}} key={key} >
+                            <div style={style_post}>
                                 <p style={{fontSize: '0.75em'}}>{article.category}</p>
                                 <div style={style_content}>
-                                    <h5 style={{ width: '70%', color: '#29292e', margin: '0' }}>{article.title}</h5>
+                                    <h5 style={style_title}>{article.title}</h5>
                                     <div id="article-img" style={{ height: '100%' }}>article image</div>
                                 </div>
                                 <p style={style_p}>{article.content}</p>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     )
                 })}
                 

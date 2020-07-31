@@ -10,7 +10,21 @@
     background-image: url('../imgs/cover.png');
     background-position: center;
     background-size: cover;
-    height: 180px;
+    height: 11.25em;
     border: 2px solid salmon;
     margin: 0.5em 0;
+}
+
+.author-date{
+    display: flex;
+    justify-content: flex-start;
+    font-size: smaller;
+}
+
+.author-date p{
+    margin: 0 0 0.5em 0.25em;
+}
+
+.author-date p i{
+    color: #555;
 }

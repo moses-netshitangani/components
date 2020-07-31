@@ -30,7 +30,7 @@ function Post(){
         // post object
         const post = {
             author: author,
-            date: new Date(date),
+            date: (new Date(date)).toDateString(),
             title: title,
             category: category,
             content: content

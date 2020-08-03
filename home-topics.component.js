@@ -7,12 +7,14 @@ function Topics(){
     const style_parent = {
         // height: '100%',
         // width: '100%',
-        margin: '5.75% 3.5%',
+        // margin: '5.75% 3.5%',
         display: 'flex',
         justifyContent: 'space-between',
-        textAlign: 'center',
+        // textAlign: 'center',
         borderBottom: '1.5px solid black',
-        backgroundColor: 'lime'
+        backgroundColor: 'lime',
+        position: 'relative',
+        top: '0'
     }
 
     // styling for headings
@@ -34,9 +36,18 @@ function Topics(){
         borderTopRightRadius: '1em'
     }
 
+    // for new div
+    const new_style = {
+        backgroundColor: 'blue',
+        paddingTop: '1%',
+        height: '80%',
+        position: 'relative',
+        bottom: '0'
+    }
+
     return(
         <div style={style_outer}>
-            <div style={{zIndex: '10000', height: '100%', position: 'relative', top: '0', backgroundColor: 'blue'}}>
+            <div style={new_style}>
                 <div style={style_parent}>
                     <Link to='/topic/News' style={{textDecoration: 'none'}}>
                         <h4 style={style_child}>News</h4>

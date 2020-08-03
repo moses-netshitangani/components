@@ -5,12 +5,14 @@ function Topics(){
 
     // styling for outer container
     const style_parent = {
+        // height: '100%',
+        // width: '100%',
         margin: '5.75% 3.5%',
         display: 'flex',
         justifyContent: 'space-between',
         textAlign: 'center',
         borderBottom: '1.5px solid black',
-        backgroundColor: 'white'
+        backgroundColor: 'lime'
     }
 
     // styling for headings
@@ -25,7 +27,7 @@ function Topics(){
     const style_outer = {
         width: '100%',
         height: '8.5%',
-        backgroundColor: 'white',
+        backgroundColor: 'purple',
         position: 'fixed',
         top: '10%',
         borderTopLeftRadius: '1em',
@@ -34,16 +36,18 @@ function Topics(){
 
     return(
         <div style={style_outer}>
-            <div style={style_parent}>
-                <Link to='/topic/News' style={{textDecoration: 'none'}}>
-                    <h4 style={style_child}>News</h4>
-                </Link>
-                <Link to='/topic/Lifestyle' style={{textDecoration: 'none'}}>
-                    <h4 style={style_child}>Lifestyle</h4>
-                </Link>
-                <Link to='/topic/Fashion' style={{textDecoration: 'none'}}>
-                    <h4 style={style_child}>Fashion</h4>   
-                </Link>
+            <div style={{zIndex: '10000', height: '100%', position: 'relative', top: '0', backgroundColor: 'blue'}}>
+                <div style={style_parent}>
+                    <Link to='/topic/News' style={{textDecoration: 'none'}}>
+                        <h4 style={style_child}>News</h4>
+                    </Link>
+                    <Link to='/topic/Lifestyle' style={{textDecoration: 'none'}}>
+                        <h4 style={style_child}>Lifestyle</h4>
+                    </Link>
+                    <Link to='/topic/Fashion' style={{textDecoration: 'none'}}>
+                        <h4 style={style_child}>Fashion</h4>   
+                    </Link>
+                </div>
             </div>
         </div>
     )

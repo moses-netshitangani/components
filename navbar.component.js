@@ -42,10 +42,10 @@ const Navbar = props => {
     return(
         <div style={{width: '100%'}}>
             {/* The navbar with the burger-menu */}
-            <div width='100%'>
+            <div className='nav-container'>
                 <nav>
                     <div className='logo-cover'>
-                    <Link to="/">
+                        <Link to="/">
                             <div className="logo"></div>
                         </Link> 
                     </div>

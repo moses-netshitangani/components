@@ -42,23 +42,39 @@ const Navbar = props => {
     return(
         <div style={{width: '100%'}}>
             {/* The navbar with the burger-menu */}
-            <nav>
-                <div className='logo-cover'>
-                   <Link to="/">
-                        <div className="logo"></div>
-                    </Link> 
-                </div>
-                
+            <div width='100%'>
+                <nav>
+                    <div className='logo-cover'>
+                    <Link to="/">
+                            <div className="logo"></div>
+                        </Link> 
+                    </div>
+                    
 
-                <div className="burger" onClick={updateMenu}>
-                    <div className={burger_classes}></div>
-                    <div className={burger_classes}></div>
-                    <div className={burger_classes}></div>
+                    <div className="burger" onClick={updateMenu}>
+                        <div className={burger_classes}></div>
+                        <div className={burger_classes}></div>
+                        <div className={burger_classes}></div>
+                    </div>
+                </nav>
+                {/* home topics */}
+                <div className='topic-outer'>
+                    <div className='topic-parent'>
+                        <Link to='/topic/News' style={{textDecoration: 'none'}}>
+                            <h4 id='topic-child'>News</h4>
+                        </Link>
+                        <Link to='/topic/Lifestyle' style={{textDecoration: 'none'}}>
+                            <h4 id='topic-child'>Lifestyle</h4>
+                        </Link>
+                        <Link to='/topic/Fashion' style={{textDecoration: 'none'}}>
+                            <h4 id='topic-child'>Fashion</h4>   
+                        </Link>
+                    </div>
                 </div>
-            </nav>
+
+            </div>
 
             {/* The content when burger-menu is clicked */}
-            <Topics />
             <div className={slide_classes}>
                 <Link to="/" style={{textDecoration: 'none'}} onClick={updateMenu}>
                     <h4>Home</h4>

@@ -28,20 +28,20 @@ function FullArticle(){
     // styling
     const style_outer = {
         textAlign: 'center',
-        marginTop: '25%',
-        paddingTop: '5%',
+        marginTop: '8em',
+        // paddingTop: '5%',
         backgroundColor: 'white'
     }
 
     const style_heading = {
         textAlign: 'left',
         color: '#29292e',
-        margin: '7.5% 5% 2% 5%',
+        margin: '7.5% 2% 2% 2%',
     }
 
     const style_text ={
         textAlign: 'left',
-        padding: '10% 5%',
+        padding: '10% 2%',
         whiteSpace: 'pre-line',
         lineHeight: '175%',
         color: 'rgb(75, 80, 80)'

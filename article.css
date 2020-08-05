@@ -19,11 +19,11 @@
     display: flex;
     justify-content: flex-start;
     font-size: smaller;
-    margin: 2% 5%;
+    margin: 2% 2%;
 }
 
 .author-date p{
-    margin: 0 0 0.5em 0.25em;
+    margin: 1.5% 0;
 }
 
 .author-date p i{

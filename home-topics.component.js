@@ -29,7 +29,7 @@ function Topics(){
     const style_outer = {
         width: '100%',
         height: '8.5%',
-        backgroundColor: 'white',
+        backgroundColor: 'purple',
         position: 'fixed',
         top: '10%',
         borderTopLeftRadius: '1em',

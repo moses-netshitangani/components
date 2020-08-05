@@ -1,5 +1,5 @@
 nav {
-    background: linear-gradient(to right, #434343, #000000);
+    background: transparent;
     /* position: fixed;
     top: 0;
     right: 0; */
@@ -7,54 +7,55 @@ nav {
     height: 19%;
     width: 100%;
     /* padding-bottom: 1.5em; */
+    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* z-index: -100; */
 }
 
 .nav-container{
-    /* position: fixed; */
-    /* top: 0; */
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 7.5em;
+    height: 7em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: blue;
-    z-index: 555555;
+    background: linear-gradient(to right, #434343, #000000);
 }
 
 /* home topics */
 .topic-outer{
     width: 100%;
-    height: 8.5%;
-    background-color: purple;
+    /* height: 8.5%; */
+    background-color: greenyellow;
     /* position: fixed; */
     /* top: 10%; */
+    flex: 0.5;
     position: relative;
     bottom: 0;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+    z-index: -8888;
 }
 
 .topic-parent{
     /* margin: 5.75% 3.5%; */
+    height: 100%;
+    width: 93%;
     display: flex;
     justify-content: space-between;
     text-align: center;
     border-bottom: 1.5px solid black;
     background-color: white;
-    position: relative;
-    top: 0;
 }
 
-.topic-child{
+#topic-child{
     font-weight: 500;
     color: black;
     flex: 1;
-    margin-bottom: 17.5%;
+    /* margin-bottom: 17.5%; */
 }
 
 .burger {

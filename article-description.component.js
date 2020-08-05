@@ -48,7 +48,7 @@ function Description(){
     }
 
     return(
-            <div style={{margin: '40% 0'}}>
+            <div style={{margin: '7.75em 0'}}>
                 
                 {data.map((article, key) =>{
                     return (

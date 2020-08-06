@@ -53,8 +53,8 @@ function FullArticle(){
             <h1 style={style_heading}>{post.title}</h1>
 
             <div className='author-date'>
-                <p><i>{`by ${post.author} / `}</i></p>
-                <p><i>{post.date}</i></p>
+                <p><i>{post.author === undefined ? '': `by ${post.author} /`}</i></p>
+                <p><i>{post.date === undefined ? '': `${post.date}`}</i></p>
             </div>
 
             <div className="article-img">   

@@ -32,7 +32,8 @@ function Description(){
         display: '-webkit-box',
         WebkitLineClamp: '3',
         WebkitBoxOrient: 'vertical',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        flex: '1'
     }
 
     // styling for the article brief
@@ -42,7 +43,7 @@ function Description(){
         WebkitLineClamp: '3',
         WebkitBoxOrient: 'vertical',
         overflow: 'hidden',
-        width: '70%',
+        width: '100%',
         color: '#29292e',
         margin: '0'
     }
@@ -57,7 +58,7 @@ function Description(){
                                 <p style={{fontSize: '0.75em'}}>{article.category}</p>
                                 <div style={style_content}>
                                     <h5 style={style_title}>{article.title}</h5>
-                                    <div id="article-img" style={{ height: '100%' }}>article image</div>
+                                    <div id="article-img" style={{ height: '3em', flex: '0.3'}}>article image</div>
                                 </div>
                                 <p style={style_p}>{article.content}</p>
                             </div>

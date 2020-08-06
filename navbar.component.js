@@ -60,13 +60,14 @@ const Navbar = props => {
                 {/* home topics */}
                 <div className='topic-outer'>
                     <div className='topic-parent'>
-                        <Link to='/topic/News' style={{textDecoration: 'none'}}>
+                        {/* ADD MARGIN 0 AUTO TO THE LINKS TO SEE IF THEY ALIGN */}
+                        <Link to='/topic/News'>
                             <h4 id='topic-child'>News</h4>
                         </Link>
-                        <Link to='/topic/Lifestyle' style={{textDecoration: 'none'}}>
+                        <Link to='/topic/Lifestyle'>
                             <h4 id='topic-child'>Lifestyle</h4>
                         </Link>
-                        <Link to='/topic/Fashion' style={{textDecoration: 'none'}}>
+                        <Link to='/topic/Fashion'>
                             <h4 id='topic-child'>Fashion</h4>   
                         </Link>
                     </div>
@@ -76,16 +77,16 @@ const Navbar = props => {
 
             {/* The content when burger-menu is clicked */}
             <div className={slide_classes}>
-                <Link to="/" style={{textDecoration: 'none'}} onClick={updateMenu}>
+                <Link to="/" onClick={updateMenu}>
                     <h4>Home</h4>
                 </Link>
-                <Link to="/admin" style={{textDecoration: 'none'}} onClick={updateMenu}>
+                <Link to="/admin" onClick={updateMenu}>
                     <h4>Admin</h4>
                 </Link>
-                <Link to="/about" style={{textDecoration: 'none'}} onClick={updateMenu}>
+                <Link to="/about" onClick={updateMenu}>
                     <h4>About Me</h4>
                 </Link>
-                <Link to="/contact" style={{textDecoration: 'none'}} onClick={updateMenu}>
+                <Link to="/contact" onClick={updateMenu}>
                     <h4>Contact</h4>
                 </Link>
             </div>

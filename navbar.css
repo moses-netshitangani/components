@@ -175,3 +175,26 @@ a{
         height: 0%;
     }
 }
+
+
+/* Desktop optimization */
+@media only screen and (min-device-width: 64em) {
+
+    nav{
+        justify-content: center;
+    }
+
+    .nav-container{
+        height: 40%;
+    }
+
+    /* hide burger menu */
+    .burger{
+        display: none;
+    }
+
+    .logo{
+        background-image: url('../imgs/cover.png');
+    }
+
+}

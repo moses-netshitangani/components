@@ -11,11 +11,11 @@ function Description(){
         window.scrollTo(0, 0); 
     }, []);
 
-    // styling for post container
+    // styling for a single post container
     const style_post = {
         margin: '5% 2%',
         padding: '0.25em',
-        height: '9em',
+        height: '9.5em',
         borderRadius: '0.188em',
         boxShadow: '0 0.188em 1.550em -0.525em grey',
         color: '#313030',
@@ -48,8 +48,13 @@ function Description(){
         margin: '0'
     }
 
+    // style for the overall container
+    const style_container = {
+        margin: '7.75em 0'
+    }
+
     return(
-            <div style={{margin: '7.75em 0'}}>
+            <div style={style_container}>
                 
                 {data.map((article, key) =>{
                     return (
@@ -57,7 +62,7 @@ function Description(){
                             <div style={style_post}>
                                 <p style={{fontSize: '0.75em'}}>{article.category}</p>
                                 <div style={style_content}>
-                                    <h5 style={style_title}>{article.title}</h5>
+                                    <h3 style={style_title}>{article.title}</h3>
                                     <div id="article-img" style={{ height: '3em', flex: '0.3'}}>article image</div>
                                 </div>
                                 <p style={style_p}>{article.content}</p>

@@ -1,6 +1,7 @@
 import React,  {useState, useEffect} from 'react';
 import CKEditor from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+// import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 import './post.css';
 const axios = require('axios');
 
@@ -55,23 +56,23 @@ function Post(){
         <div className='form'>
             <h1>Write a Post</h1>
             <CKEditor
-                    editor={ ClassicEditor }
-                    data="<p>Hello from CKEditor 5!</p>"
-                    onInit={ editor => {
-                        // You can store the "editor" and use when it is needed.
-                        console.log( 'Editor is ready to use!', editor );
-                    } }
-                    onChange={ ( event, editor ) => {
-                        const data = editor.getData();
-                        console.log( { event, editor, data } );
-                    } }
-                    onBlur={ ( event, editor ) => {
-                        console.log( 'Blur.', editor );
-                    } }
-                    onFocus={ ( event, editor ) => {
-                        console.log( 'Focus.', editor );
-                    } }
-                />
+                editor={ClassicEditor}
+                data="<p>Hello Kenichi! Create your new blog post here.</p>"
+                onInit={editor => {
+                    // You can store the "editor" and use when it is needed.
+                    console.log( 'Editor is ready to use!', editor );
+                } }
+                onChange={ ( event, editor ) => {
+                    const data = editor.getData();
+                    console.log( { event, editor, data } );
+                } }
+                onBlur={ ( event, editor ) => {
+                    console.log( 'Blur.', editor );
+                } }
+                onFocus={ ( event, editor ) => {
+                    console.log( 'Focus.', editor );
+                } }
+            />
             <form onSubmit={onSubmit}>
                 {/* author name & date of post */}
                 <div className='post-details'>

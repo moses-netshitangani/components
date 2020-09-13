@@ -37,6 +37,7 @@ function FullArticle(){
         textAlign: 'left',
         color: '#29292e',
         margin: '7.5% 2% 2% 2%',
+        // fontSize: '1.5em'
     }
 
     const style_text ={

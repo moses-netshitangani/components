@@ -40,13 +40,13 @@ function Topics(){
         <div style={style_outer}>
             <div style={style_parent}>
                 <Link to='/topic/News' style={{textDecoration: 'none'}}>
-                    <h4 style={style_child}>News</h4>
+                    <h3 style={style_child}>News</h3>
                 </Link>
                 <Link to='/topic/Lifestyle' style={{textDecoration: 'none'}}>
-                    <h4 style={style_child}>Lifestyle</h4>
+                    <h3 style={style_child}>Lifestyle</h3>
                 </Link>
                 <Link to='/topic/Fashion' style={{textDecoration: 'none'}}>
-                    <h4 style={style_child}>Fashion</h4>   
+                    <h3 style={style_child}>Fashion</h3>   
                 </Link>
             </div>
         </div>

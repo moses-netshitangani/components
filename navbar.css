@@ -207,7 +207,6 @@ a{
     /* home topics */
     .topic-outer {
         width: 100%;
-        /* background-color: red; */
         border-radius: 0%;
         border-bottom: 0.1em solid grey;
         box-shadow: 0 0.188em 1.550em -0.525em rgb(41, 39, 39);
@@ -220,7 +219,7 @@ a{
 
     .topic-parent a {
         flex: 1;
-        margin: 1.5em 10em 0em 10em;
+        margin: 1.5em 8em 0em 8em;
     }
 
     #topic-child {

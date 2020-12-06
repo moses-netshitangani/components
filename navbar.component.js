@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './navbar.css';
 
-import Topics from './home-topics.component';
-
 const Navbar = props => {
     // menu variable to hold state for the burger-bar
     let [menu, setMenu] = useState(false);

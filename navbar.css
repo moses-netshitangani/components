@@ -181,11 +181,15 @@ a{
 @media only screen and (min-device-width: 64em) {
 
     nav{
-        justify-content: center;
+        justify-content: left;
     }
 
+    .logo-cover{
+        height: 10em;
+        width: 20em;
+    }
     .nav-container{
-        height: 40%;
+        height: 25%;
     }
 
     /* hide burger menu */

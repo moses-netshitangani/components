@@ -194,7 +194,6 @@ a{
         position: absolute;
     }
 
-    /* hide burger menu */
     .burger{
         display: none;
     }
@@ -211,24 +210,26 @@ a{
         /* background-color: red; */
         border-radius: 0%;
         border-bottom: 0.1em solid grey;
+        box-shadow: 0 0.188em 1.550em -0.525em rgb(41, 39, 39);
     }
 
     .topic-parent {
         height: 100%;
         border-bottom: 0px solid black;
-        /* background-color: beige; */
     }
 
     .topic-parent a {
         flex: 1;
-        /* background-color: pink; */
         margin: 1.5em 10em 0em 10em;
     }
 
     #topic-child {
         font-size: 1.5em;
         color: black;
-        /* background-color: blue; */
         height: 75%;
     }
+    /* end of home topics */
+
+
+
 }

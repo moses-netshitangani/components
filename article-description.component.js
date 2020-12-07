@@ -1,6 +1,7 @@
 import React, {useEffect, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {BlogContext} from './blog-context';
+import './article-description.css';
 
 function Description(){
     // acquiring data from BlogContext component
@@ -12,14 +13,14 @@ function Description(){
     }, []);
 
     // styling for a single post container
-    const style_post = {
-        margin: '5% 2%',
-        padding: '0.25em',
-        height: '9.5em',
-        borderRadius: '0.188em',
-        boxShadow: '0 0.188em 1.550em -0.525em grey',
-        color: '#313030',
-    }
+    // const style_post = {
+    //     margin: '5% 2%',
+    //     padding: '0.25em',
+    //     height: '9.5em',
+    //     borderRadius: '0.188em',
+    //     boxShadow: '0 0.188em 1.550em -0.525em grey',
+    //     color: '#313030',
+    // }
 
     // styling for title and display image
     const style_content = {
@@ -54,12 +55,12 @@ function Description(){
     }
 
     return(
-            <div style={style_container}>
+            <div className="outer-container" style={style_container}>
                 
                 {data.map((article, key) =>{
                     return (
-                        <Link to={`/articles/single/${article._id}`} style={{textDecoration:'none'}} key={key} >
-                            <div style={style_post}>
+                        <Link to={`/articles/single/${article._id}`} className="link" style={{textDecoration:'none'}} key={key} >
+                            <div className="post-container">
                                 <p style={{fontSize: '0.75em'}}>{article.category}</p>
                                 <div style={style_content}>
                                     <h3 style={style_title}>{article.title}</h3>

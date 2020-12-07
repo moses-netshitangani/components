@@ -190,7 +190,7 @@ a{
         width: 20em;
     }
     .nav-container{
-        height: 25%;
+        height: 17%;
         position: absolute;
     }
 
@@ -219,7 +219,7 @@ a{
 
     .topic-parent a {
         flex: 1;
-        margin: 1.5em 8em 0em 8em;
+        margin: 0.75em 8em 0em 8em;
     }
 
     #topic-child {

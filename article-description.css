@@ -1,3 +1,13 @@
+.post-container{
+    margin: 5% 2%;
+    padding: 0.25em;
+    height: 9.5em;
+    border-radius: 0.188em;
+    box-shadow: 0 0.188em 1.550em -0.525em grey;
+    color: #313030;
+}
+
+
 /* styling for desktop */
 
 @media only screen and (min-device-width: 64em) {
@@ -6,6 +16,24 @@
     .outer-container {
         position: relative;
         top: 2.5em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* rearranging posts */
+    .link{
+        width: 47.5%;
+        height: 15em;
+        margin-bottom: 1em;
+        position: relative;
+    }
+
+    .post-container{
+        /* background-color: red; */
+        margin: 0 auto;
+        height: 100%;
+        
     }
 
 }

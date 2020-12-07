@@ -1,0 +1,11 @@
+/* styling for desktop */
+
+@media only screen and (min-device-width: 64em) {
+
+    /* placing the outer container just below the navbar and topic headings */
+    .outer-container {
+        position: relative;
+        top: 2.5em;
+    }
+
+}

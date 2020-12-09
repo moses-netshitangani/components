@@ -3,7 +3,7 @@
     padding: 0.25em;
     height: 9.5em;
     border-radius: 0.188em;
-    box-shadow: 0 0.188em 1.550em -0.525em grey;
+    box-shadow: 0 0.188em 1.550em -0.525em rgb(156, 156, 156);
     color: #313030;
 }
 
@@ -59,12 +59,13 @@
 
     /* placing the outer container just below the navbar and topic headings */
     .outer-container {
-        position: relative;
-        top: 2.5em;
+        /* position: relative; */
+        /* top: 2.5em; */
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 0 1.25% 0 1.25%;
+        padding: 3% 1.25% 0 1.25%;
+        background-color: #f3f3f3;
     }
 
     /* rearranging posts */
@@ -75,8 +76,8 @@
         position: relative;
     }
 
-    .link:hover {
-        background-color: rgb(248, 244, 244);
+    .post-container:hover {
+        background-color: rgb(249, 250, 249);
     }
 
     .post-container{
@@ -84,6 +85,7 @@
         height: 100%;
         padding: 1.5em;
         border-radius: 1.25em;
+        background-color: white;
     }
 
     .post-container h3{

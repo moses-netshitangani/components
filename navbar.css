@@ -208,8 +208,7 @@ a{
     .topic-outer {
         width: 100%;
         border-radius: 0%;
-        border-bottom: 0.1em solid grey;
-        box-shadow: 0 0.188em 1.550em -0.525em rgb(41, 39, 39);
+        box-shadow: 0 0.188em 1.550em -0.525em rgb(114, 114, 114);
     }
 
     .topic-parent {

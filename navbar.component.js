@@ -37,6 +37,24 @@ const Navbar = props => {
         updateSlide(menu);
     }
 
+    // admin login variables
+    let [username, setName] = useState("");
+    let [password, setPassword] = useState("");
+
+    // capturing username and password
+    const changeName = e => {
+        setName(e.target.value);
+    }
+
+    const changePassword = e => {
+        setPassword(e.target.value);
+    }
+
+    // submitting login details
+    const onSubmit = e => {
+
+    }
+
     return(
         <div style={{width: '100%'}}>
             {/* The navbar with the burger-menu */}
@@ -48,6 +66,8 @@ const Navbar = props => {
                         </Link> 
                     </div>
                     
+                    <div className="login-icon">
+                    </div>
 
                     <div className="burger" onClick={updateMenu}>
                         <div className={burger_classes}></div>
@@ -68,6 +88,25 @@ const Navbar = props => {
                         <Link to='/topic/Fashion'>
                             <h4 id='topic-child'>Fashion</h4>   
                         </Link>
+                    </div>
+                </div>
+
+                {/* login page popup */}
+                <div className="login-grey">
+                    <div className="login-page">
+
+                        <h3>Admin Login</h3>
+
+                        <form onSubmit={onSubmit}>
+                            {/* admin username and password */}
+                            <div className='email'>
+                                <h4>Username</h4>
+                                <input type='text' name='email' placeholder='Type your username' onChange={changeName} id='email' />
+                                <h4>Password</h4>
+                                <input type="text" name="password" placeholder="Type your password" onChange={changePassword} id="password" />
+                            </div>
+                            <input type='submit' id='submit-button'/>
+                        </form>
                     </div>
                 </div>
 

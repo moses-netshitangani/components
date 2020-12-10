@@ -99,13 +99,13 @@ const Navbar = props => {
 
                         <form onSubmit={onSubmit}>
                             {/* admin username and password */}
-                            <div className='email'>
+                            <div className='admin-details'>
                                 <h4>Username</h4>
                                 <input type='text' name='email' placeholder='Type your username' onChange={changeName} id='email' />
                                 <h4>Password</h4>
                                 <input type="text" name="password" placeholder="Type your password" onChange={changePassword} id="password" />
                             </div>
-                            <input type='submit' id='submit-button'/>
+                            <input type='submit' className='submit-button' value="Login"/>
                         </form>
                     </div>
                 </div>

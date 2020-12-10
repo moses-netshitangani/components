@@ -24,34 +24,11 @@ function FullArticle(){
             .catch(err => console.log(err));
         
     }, []);
-    
-    // styling
-    const style_outer = {
-        textAlign: 'center',
-        marginTop: '8em',
-        // paddingTop: '5%',
-        backgroundColor: 'white'
-    }
-
-    const style_heading = {
-        textAlign: 'left',
-        color: '#29292e',
-        margin: '7.5% 2% 2% 2%',
-        // fontSize: '1.5em'
-    }
-
-    const style_text ={
-        textAlign: 'left',
-        padding: '10% 2%',
-        whiteSpace: 'pre-line',
-        lineHeight: '175%',
-        color: 'rgb(75, 80, 80)'
-    }
 
     return(
-        <div style={style_outer}>
+        <div className="article-outer-container">
 
-            <h1 style={style_heading}>{post.title}</h1>
+            <h1 className="heading">{post.title}</h1>
 
             <div className='author-date'>
                 <p><i>{post.author === undefined ? '': `by ${post.author} /`}</i></p>
@@ -62,7 +39,7 @@ function FullArticle(){
             </div>
             
             <div>
-                <p style={style_text}>{post.content}</p>
+                <p className="full-content">{post.content}</p>
             </div>
         </div>
     )

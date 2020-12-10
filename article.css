@@ -1,3 +1,16 @@
+/* Mobile version */
+
+.article-outer-container{
+    text-align: center;
+    padding-top: 7em;
+    background-color: white;
+}
+
+.heading{
+    text-align: left;
+    color: #29292e;
+    margin: 7.5% 2% 2% 2%;
+}
 
 #article-img {
     background-image: url('../imgs/profile.png');
@@ -29,3 +42,20 @@
 .author-date p i{
     color: #555;
 }
+
+.full-content{
+    text-align: left;
+    padding: 10% 2%;
+    white-space: pre-line;
+    line-height: 175%;
+    color: rgb(75, 80, 80);
+}
+/* End of mobile */
+
+
+
+/* Desktop optimization */
+@media only screen and (min-device-width: 64em){
+
+}
+/* End of desktop optimization */

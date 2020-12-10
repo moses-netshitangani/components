@@ -176,6 +176,16 @@ a{
     }
 }
 
+@keyframes widen{
+    from{
+        border-bottom: 2.5px solid white;
+    }
+    
+    to{
+        width: 2.5px solid #c93655;
+    }
+}
+
 
 /* Desktop optimization */
 @media only screen and (min-device-width: 64em) {
@@ -219,6 +229,11 @@ a{
     .topic-parent a {
         flex: 1;
         margin: 0.75em 8em 0em 8em;
+    }
+
+    .topic-parent a:hover{
+        border-bottom: 2.5px solid #c93655;
+        animation: widen 1s;
     }
 
     #topic-child {

@@ -57,5 +57,39 @@
 /* Desktop optimization */
 @media only screen and (min-device-width: 64em){
 
+    .heading{
+        /* background-color: blue; */
+        width: 60%;
+        display: inline-block;
+        font-size: 4.75em;
+        margin: 0.75em 0 0 0;
+    }
+
+    .article-img{
+        /* background-color: blue; */
+        width: 60%;
+        height: 30em;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .author-date{
+        /* background: green; */
+        width: 60%;
+        display: inline-block;
+        font-size: larger;
+        text-align: left;
+    }
+
+    .author-date p{
+        display: inline-block;
+    }
+
+    .full-content{
+        /* background-color: blue; */
+        width: 60%;
+        padding: 2% 2%;
+        font-size: 1.5em;
+    }
 }
 /* End of desktop optimization */

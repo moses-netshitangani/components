@@ -229,13 +229,13 @@ a{
         position: fixed;
         width: 100%;
         height: 100%;
-        background-color: #00000052;
+        background-color: #000000b4;
         z-index: 10;
     }
     .login-page{
         display: flex;
         flex-direction: column;
-        height: 22em;
+        height: 24em;
         width: 18em;
         background-color: white;
         border-radius: 20px;
@@ -243,7 +243,18 @@ a{
     }
 
     .login-page h3{
-        margin-top: 1.5em;
+        margin-top: 1em;
+    }
+
+    .cancel-btn{
+        width: 1.5em;
+        height: 1.5em;
+        background-image: url("../imgs/cancel.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
     }
 
     .admin-details h4{

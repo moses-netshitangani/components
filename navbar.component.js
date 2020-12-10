@@ -94,7 +94,7 @@ const Navbar = props => {
                 {/* login page popup */}
                 <div className="login-grey">
                     <div className="login-page">
-
+                        <div className="cancel-btn"></div>
                         <h3>Admin Login</h3>
 
                         <form onSubmit={onSubmit}>

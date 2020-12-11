@@ -14,7 +14,7 @@ function Description(){
 
     // style for the overall container
     const style_container = {
-        margin: '7.75em 0'
+        margin: '7.75em 0 0 0'
     }
 
     return(

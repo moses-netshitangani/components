@@ -10,12 +10,13 @@
 
 .footer-logo{
     background-image: url("../imgs/cover.png");
-    height: 3em;
+    height: 3.5em;
     width: 70%;
+    margin-bottom: 0.25em;
 }
 
 .social-icons{
-    width: 100%;
+    width: 60%;
     height: 3em;
     display: flex;
     flex-direction: row;
@@ -23,8 +24,8 @@
 
 .social-icons div {
     border-radius: 40px;
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
 }
 
 .insta{
@@ -41,7 +42,7 @@
 }
 
 .copyright{
-    padding-top: 1em;
+    padding-top: 0.25em;
 }
 .copyright p{
     color: white;

@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="email img"></div>
             </div>
             <div className="copyright">
-                <p>Copyright &copy; 2020 Vasco Media</p>
+                <p>Copyright &copy; 2021 Vasco Media</p>
                 <p>All Rights Reserved</p>
             </div>
         </div>

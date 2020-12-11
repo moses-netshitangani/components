@@ -223,6 +223,9 @@ a{
         background-repeat: no-repeat;
     }
 
+    .login-grey-inactive{
+        display: none;
+    }
     .login-grey{
         display: inline-block;
         padding-top: 8em;

@@ -40,6 +40,7 @@ const Navbar = props => {
     // admin login variables
     let [username, setName] = useState("");
     let [password, setPassword] = useState("");
+    let [status, setStatus] = useState("login-grey-inactive")
 
     // capturing username and password
     const changeName = e => {
@@ -48,6 +49,16 @@ const Navbar = props => {
 
     const changePassword = e => {
         setPassword(e.target.value);
+    }
+
+    // opening the admin login page
+    const openLogin = () =>
+    {
+        setStatus("login-grey");
+    }
+    // closing the admin login page
+    const closeLogin = () => {
+        setStatus("login-grey-inactive");
     }
 
     // submitting login details
@@ -66,7 +77,7 @@ const Navbar = props => {
                         </Link> 
                     </div>
                     
-                    <div className="login-icon">
+                    <div className="login-icon" onClick={openLogin}>
                     </div>
 
                     <div className="burger" onClick={updateMenu}>
@@ -78,7 +89,6 @@ const Navbar = props => {
                 {/* home topics */}
                 <div className='topic-outer'>
                     <div className='topic-parent'>
-                        {/* ADD MARGIN 0 AUTO TO THE LINKS TO SEE IF THEY ALIGN */}
                         <Link to='/topic/News'>
                             <h4 id='topic-child'>News</h4>
                         </Link>
@@ -92,9 +102,9 @@ const Navbar = props => {
                 </div>
 
                 {/* login page popup */}
-                <div className="login-grey">
+                <div className={status}>
                     <div className="login-page">
-                        <div className="cancel-btn"></div>
+                        <div className="cancel-btn" onClick={closeLogin}></div>
                         <h3>Admin Login</h3>
 
                         <form onSubmit={onSubmit}>

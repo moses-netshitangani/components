@@ -1,0 +1,55 @@
+/* Mobile */
+.footer-container{
+    background-image: linear-gradient(to right, #434343, #000000);
+    width: 100%;
+    height: 10em;
+    position: relative;
+    top: 0;
+    text-align: center;
+}
+
+.footer-logo{
+    background-image: url("../imgs/cover.png");
+    height: 3em;
+    width: 70%;
+}
+
+.social-icons{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+}
+
+.social-icons div {
+    border-radius: 40px;
+    height: 3em;
+    width: 3em;
+}
+
+.insta{
+    background-image: url("../imgs/insta.png");
+    
+}
+
+.twitter{
+    background-image: url("../imgs/twitter.png");
+}
+
+.email{
+    background-image: url("../imgs/mail.png");
+}
+
+.copyright{
+    padding-top: 1em;
+}
+.copyright p{
+    color: white;
+    display: block;
+}
+
+.img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

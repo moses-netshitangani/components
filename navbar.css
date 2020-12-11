@@ -194,6 +194,17 @@ a{
     }
 }
 
+@keyframes popup{
+    from{
+        background-color: transparent;
+        height: 20em;
+    }
+    to{
+        background-color: white;
+        height: 24em;
+    }
+}
+
 
 /* Desktop optimization */
 @media only screen and (min-device-width: 64em) {
@@ -247,6 +258,8 @@ a{
         background-color: white;
         border-radius: 20px;
         font-size: 1.5em;
+        animation: popup 2s;
+        animation-fill-mode: forwards;
     }
 
     .login-page h3{

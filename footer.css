@@ -54,3 +54,35 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* End of mobile version */
+
+
+/* Desktop optimization */
+@media only screen and (min-device-width: 64em){
+    .footer-container {
+        height: 17.5em;
+    }
+
+    .footer-logo {
+        height: 7.5em;
+        width: 35%;
+    }
+
+    .social-icons {
+        height: 5em;
+    }
+
+    .social-icons div {
+        height: 80%;
+        width: 4em;
+    }
+
+    .social-icons div:hover {
+        cursor: pointer;
+    }
+
+    .copyright p {
+        font-size: 1.5em;
+    }
+}
+/* End of Desktop optimization */

@@ -41,7 +41,6 @@ function Description(){
                 
                 {/* for layout purposes */}
                 <div className="fill-space"></div>
-                
             </div>
     )
 }

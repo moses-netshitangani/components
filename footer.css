@@ -79,6 +79,7 @@
 
     .social-icons div:hover {
         cursor: pointer;
+        background-color: #c93655;
     }
 
     .copyright p {

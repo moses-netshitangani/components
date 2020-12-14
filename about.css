@@ -1,4 +1,8 @@
 /* Mobile */
+
+.about-container{
+    color: #29292e;
+}
 .about-heading{
     margin-top: 5em;
     text-align: center;
@@ -6,8 +10,11 @@
 }
 
 .about-content{
-    color: rgb(69, 68, 68);
     padding: 1em 1em;
+}
+
+.about-content p{
+    color: rgb(69, 68, 68);
 }
 
 .about-image{
@@ -22,7 +29,7 @@
 @media only screen and (min-device-width: 64em)
 {
     .about-container{
-        padding: 0.5% 10%;
+        padding: 0.5% 20%;
         font-size: 1.5em;
     }
 

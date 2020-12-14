@@ -2,18 +2,6 @@ import React from 'react';
 import './about.css';
 
 const About = () => {
-
-    // styling
-    // const style_heading = {
-    //     marginTop: '5em',
-    //     textAlign: 'center',
-    //     color: '#29292e'
-    // }
-
-    // const style_content = {
-    //     color: 'rgb(69, 68, 68)',
-    //     padding: '1em 1em'
-    // }
     
     return(
         <div className="about-container">

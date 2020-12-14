@@ -14,6 +14,7 @@ const Footer = () => {
             <div className="copyright">
                 <p>Copyright &copy; 2021 Vasco Media</p>
                 <p>All Rights Reserved</p>
+                <p><a>About Me</a></p>
             </div>
         </div>
     )

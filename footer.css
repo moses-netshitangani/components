@@ -49,6 +49,10 @@
     display: block;
 }
 
+.copyright p:nth-child(3){
+    display: none;
+}
+
 .img{
     background-position: center;
     background-repeat: no-repeat;
@@ -85,6 +89,10 @@
 
     .copyright p {
         font-size: 1.5em;
+    }
+
+    .copyright p:nth-child(3){
+        display: block;
     }
 
     .copyright a{

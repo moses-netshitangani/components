@@ -1,0 +1,45 @@
+/* Mobile */
+.about-heading{
+    margin-top: 5em;
+    text-align: center;
+    color: #29292e;
+}
+
+.about-content{
+    color: rgb(69, 68, 68);
+    padding: 1em 1em;
+}
+
+.about-image{
+    display: none;
+}
+
+/* End of Mobile section */
+
+
+
+/* Desktop optimization */
+@media only screen and (min-device-width: 64em)
+{
+    .about-container{
+        padding: 0.5% 10%;
+        font-size: 1.5em;
+    }
+
+    .about-heading{
+        margin-bottom: 1em;
+    }
+
+    .about-image{
+        display: block;
+        height: 5em;
+        width: 5em;
+        border-radius: 40px;
+        background-image: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 24, 62));
+    }
+
+    .about-content{
+        margin-top: 1em;
+    }
+}
+/* End of desktop optimization */

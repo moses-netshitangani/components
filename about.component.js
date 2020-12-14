@@ -1,28 +1,31 @@
 import React from 'react';
+import './about.css';
 
 const About = () => {
 
     // styling
-    const style_heading = {
-        marginTop: '5em',
-        textAlign: 'center',
-        color: '#29292e'
-    }
+    // const style_heading = {
+    //     marginTop: '5em',
+    //     textAlign: 'center',
+    //     color: '#29292e'
+    // }
 
-    const style_content = {
-        color: 'rgb(69, 68, 68)',
-        padding: '1em 1em'
-    }
+    // const style_content = {
+    //     color: 'rgb(69, 68, 68)',
+    //     padding: '1em 1em'
+    // }
     
     return(
-        <div>
-            <h2 style={style_heading}>
+        <div className="about-container">
+            <h2 className="about-heading">
                 About Me
             </h2>
 
-            <div style={style_content}>
+            <div className='about-image'></div>
+
+            <div className="about-content">
                 <p>
-                    Hi! I am <i><b>Kenichi Vasco</b></i> and blogging is one of my many 
+                    Hi! I am <i>Lihle</i> and blogging is one of my many 
                     passions. My aim is to keep you informed about topical  
                     events relating to Fashion, Lifestyle and a little 
                     bit of Gossip too (I mean why not?).
@@ -32,12 +35,12 @@ const About = () => {
                     All content in this blog is written by myself
                     and I would very much appreciate your feedback, hence
                     I compel you to leave a comment and/or share the 
-                    posts.
+                    articles.
                 </p> 
                 <br />
                 <p>
                     You can find my socials in the Contact section.
-                    Thanks in advance and happy reading ;).
+                    Thanks in advance and happy reading :).
                 </p>
                 </div>
         </div>

@@ -52,8 +52,6 @@
 }
 
 #disqus_thread{
-    /* width: 90%; */
-    /* background-color: blue; */
     margin: 5%;
 }
 /* End of mobile */
@@ -100,7 +98,7 @@
 
     #disqus_thread{
         width: 60%;
-        margin: 0 auto;
+        display: inline-block;
     }
 }
 /* End of desktop optimization */

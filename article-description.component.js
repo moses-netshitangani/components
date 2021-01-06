@@ -24,7 +24,7 @@ function Description(){
                     return (
                         <Link to={`/articles/single/${article._id}`} className="link" style={{textDecoration:'none'}} key={key} >
                             <div className="post-container">
-                                <p  className="category" >{article.category}</p>
+                                {/* <p  className="category" >{article.category}</p>
                                 <div className="content">
                                     <div className="brief">
                                         <h3>{article.title}</h3>
@@ -33,7 +33,7 @@ function Description(){
                                     <div id="article-img">
                                         article image
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </Link>
                     )

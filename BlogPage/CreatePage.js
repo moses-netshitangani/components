@@ -42,18 +42,18 @@ function CreatePage(props) {
 
 
     return (
-        <div style={{ maxWidth: '700px', margin: '10rem auto' }}>
+        <div style={{ maxWidth: '700px', margin: '10rem auto', backgroundColor: 'pink' }}>
             <div style={{ textAlign: 'center' }}>
-                <h1> Editor</h1>
+                <h1>Create a blog post!</h1>
             </div>
             <QuillEditor
-                placeholder={"Start Posting Something"}
+                placeholder={"Hi Lihle! Write something."}
                 onEditorChange={onEditorChange}
                 onFilesChange={onFilesChange}
             />
 
-            <form onSubmit={onSubmit}>
-                <div style={{ textAlign: 'center', margin: '2rem', }}>
+            {/* <form onSubmit={onSubmit}>
+                <div style={{ textAlign: 'center', margin: '2rem', backgroundColor: 'beige' }}>
                     <button
                         className=""
                         onSubmit={onSubmit}
@@ -61,7 +61,7 @@ function CreatePage(props) {
                         Submit
                 </button>
                 </div>
-            </form>
+            </form> */}
         </div>
     )
 }

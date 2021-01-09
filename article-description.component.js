@@ -34,7 +34,7 @@ function Description(){
                                         article image
                                     </div>
                                 </div> */}
-                                <div dangerouslySetInnerHTML={{__html: article.content}}></div>
+                                <div className="article" dangerouslySetInnerHTML={{__html: article.content}}></div>
                             </div>
                         </Link>
                     )

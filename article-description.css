@@ -1,10 +1,11 @@
 .post-container{
     margin: 5% 2%;
     padding: 0.25em;
-    height: 9.5em;
+    height: 7em;
     border-radius: 0.188em;
     box-shadow: 0 0.188em 1.550em -0.525em rgb(156, 156, 156);
     color: #313030;
+    background-color: red;
 }
 
 .category{
@@ -50,6 +51,36 @@
     flex: 0.35;
 }
 
+/* ME ME ME ME ME ME */
+.article{
+    background-color: green;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.article img, .article iframe, .article video{
+    width: 40%;
+    height: 100%;
+    border-radius: 5px;
+    /* margin: 0.5em; */
+}
+
+.article h2, .article p{
+    display: none;
+}
+
+.article h1{
+    font-size: 1.25em;
+    margin: 0.5em;
+}
+
+.link{
+    margin: 0;
+}
 
 
 

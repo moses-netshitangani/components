@@ -1,11 +1,10 @@
 .post-container{
     margin: 5% 2%;
     padding: 0.25em;
-    height: 7em;
+    height: 6.5em;
     border-radius: 0.188em;
     box-shadow: 0 0.188em 1.550em -0.525em rgb(156, 156, 156);
     color: #313030;
-    background-color: red;
 }
 
 .category{
@@ -53,34 +52,58 @@
 
 /* ME ME ME ME ME ME */
 .article{
-    background-color: green;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     margin: 0;
     border-radius: 5px;
+    position: relative;
+    z-index: -100;
 }
 
 .article img, .article iframe, .article video{
-    width: 40%;
+    width: 35%;
     height: 100%;
     border-radius: 5px;
-    /* margin: 0.5em; */
+    order: -1;
 }
 
 .article h2, .article p{
     display: none;
 }
 
-.article h1{
-    font-size: 1.25em;
-    margin: 0.5em;
+.article h2:first-of-type{
+    display: initial;
+    font-size: 0.75em;
+    margin: 0.25em;
+    /* max number of lines is 4 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #29292e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* background-color: burlywood; */
+    width: 14em;
 }
 
-.link{
-    margin: 0;
+.article h1{
+    font-size: 1em;
+    margin: 0.25em;
+    /* max number of lines is 4 */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: bolder;
+    order: 1;
+    /* background-color: orange; */
+    /* flex: 2; */
 }
+
 
 
 

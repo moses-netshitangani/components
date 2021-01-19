@@ -59,6 +59,20 @@
 .article-outer-container {
     text-align: left;
 }
+
+.article-inner-container img{
+    margin-bottom: 5%;
+}
+
+.article-inner-container p{
+    margin: 1.5%;
+    line-height: 150%;
+    white-space: pre-line;
+    color: rgb(75, 80, 80);
+    padding: 0% 2%;
+}
+
+
 /* End of mobile */
 
 

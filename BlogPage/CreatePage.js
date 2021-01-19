@@ -24,7 +24,7 @@ function CreatePage(props) {
     const onSubmit = (event) => {
         event.preventDefault();
 
-        setContent("");
+        // setContent("");
 
         // if (user.userData && !user.userData.isAuth) {
         //     return alert('Please Log in first');
@@ -38,6 +38,9 @@ function CreatePage(props) {
         axios.post('http://localhost:3000/articles/add', variables)
             .then(res => console.log(res))
             .catch(err => console.log(err));
+
+        content = "";
+        console.log(content);
     }
 
 

@@ -10,8 +10,8 @@ import axios from 'axios';
 function CreatePage(props) {
     // const user = useSelector(state => state.user);
 
-    const [content, setContent] = useState("");
-    const [files, setFiles] = useState([]);
+    let [content, setContent] = useState("");
+    let [files, setFiles] = useState([]);
 
     const onEditorChange = (value) => {
         setContent(value);
@@ -52,7 +52,7 @@ function CreatePage(props) {
                 onFilesChange={onFilesChange}
             />
 
-            {/* <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}>
                 <div style={{ textAlign: 'center', margin: '2rem', backgroundColor: 'beige' }}>
                     <button
                         className=""
@@ -61,7 +61,7 @@ function CreatePage(props) {
                         Submit
                 </button>
                 </div>
-            </form> */}
+            </form>
         </div>
     )
 }

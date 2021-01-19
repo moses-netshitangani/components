@@ -68,13 +68,20 @@
     border-radius: 5px;
     margin: 0;
     order: -1;
+    display: none;
+}
+
+.article img:first-of-type,
+.article iframe:first-of-type,
+.article video:first-of-type {
+    display: initial;
 }
 
 .article h2, .article p{
     display: none;
 }
 
-.article h2:first-of-type{
+.article h2:first-of-type, .article p:first-of-type{
     display: initial;
     font-size: 0.75em;
     margin: 0.25em;

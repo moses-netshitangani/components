@@ -269,7 +269,6 @@ class QuillEditor extends React.Component {
 
                         let range = quill.getSelection();
                         let position = range ? range.index : 0;
-                        console.log(response.data.url);
 
                         //먼저 노드 서버에다가 이미지를 넣은 다음에   여기 아래에 src에다가 그걸 넣으면 그게 
                         //이미지 블롯으로 가서  크리에이트가 이미지를 형성 하며 그걸 발류에서     src 랑 alt 를 가져간후에  editorHTML에 다가 넣는다.
@@ -367,7 +366,7 @@ class QuillEditor extends React.Component {
                 <div id="toolbar">
                     <select className="ql-header" defaultValue={""} onChange={e => e.persist()}>
                         <option value="1" />
-                        <option value="2" />
+                        {/* <option value="2" /> */}
                         <option value="" />
                     </select>
                     <button className="ql-bold" />

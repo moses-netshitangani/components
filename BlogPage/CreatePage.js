@@ -37,6 +37,15 @@ function CreatePage(props) {
         content = "";
     }
 
+    let submit_btn_style = {
+        width: '15em',
+        height: '2.5em',
+        borderRadius: '15px',
+        backgroundImage: 'linear-gradient(to right, orange, #c93655)',
+        color: 'white',
+        fontSize: '1em',
+        border: '0px solid transparent'
+    }
 
     return (
         <div style={{margin: '10rem auto'}}>
@@ -50,10 +59,10 @@ function CreatePage(props) {
             />
 
             <form onSubmit={onSubmit}>
-                <div style={{ textAlign: 'center', margin: '2rem', backgroundColor: 'beige' }}>
+                <div style={{ textAlign: 'center', margin: '2rem'}}>
                     <button
-                        className=""
                         onSubmit={onSubmit}
+                        style={submit_btn_style}
                     >
                         Submit
                 </button>

@@ -1,0 +1,13 @@
+/* Mobile version */
+.quill-cover {
+    z-index: 1;
+    width: 100%;
+}
+
+/* desktop version */
+@media only screen and (min-device-width: 64em){
+    
+    .quill-cover{
+        width: 60%;
+    }
+}

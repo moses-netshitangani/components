@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactQuill, { Quill } from 'react-quill';
-import "react-quill/dist/quill.snow.css";
+import 'react-quill/dist/quill.snow.css';
+import './quill.css';
 
 import axios from 'axios';
 const __ISMSIE__ = navigator.userAgent.match(/Trident/i) ? true : false;
@@ -362,7 +363,7 @@ class QuillEditor extends React.Component {
 
     render() {
         return (
-            <div style={{zIndex: '1'}}>
+            <div className='quill-cover'>
                 <div id="toolbar">
                     <select className="ql-header" defaultValue={""} onChange={e => e.persist()}>
                         <option value="1" />
@@ -375,17 +376,17 @@ class QuillEditor extends React.Component {
                     <button className="ql-insertImage">
                         I
                     </button>
-                    <button className="ql-insertVideo">
+                    {/* <button className="ql-insertVideo">
                         V
                     </button>
                     <button className="ql-insertFile">
                         F
-                    </button>
+                    </button> */}
                     <button className="ql-link" />
-                    <button className="ql-code-block" />
-                    <button className="ql-video" />
+                    {/* <button className="ql-code-block" /> */}
+                    {/* <button className="ql-video" /> */}
                     <button className="ql-blockquote" />
-                    <button className="ql-clean" />
+                    {/* <button className="ql-clean" /> */}
 
 
 

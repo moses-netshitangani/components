@@ -29,6 +29,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(to right, #434343, #000000);
+    z-index: 2;
 }
 
 /* home topics */

@@ -26,13 +26,8 @@ function CreatePage(props) {
 
         // setContent("");
 
-        // if (user.userData && !user.userData.isAuth) {
-        //     return alert('Please Log in first');
-        // }
-
         const variables = {
             content: content
-            // userID: user.userData._id
         }
 
         axios.post('http://localhost:3000/articles/add', variables)
@@ -40,14 +35,13 @@ function CreatePage(props) {
             .catch(err => console.log(err));
 
         content = "";
-        console.log(content);
     }
 
 
     return (
-        <div style={{ maxWidth: '700px', margin: '10rem auto', backgroundColor: 'pink' }}>
-            <div style={{ textAlign: 'center' }}>
-                <h1>Create a blog post!</h1>
+        <div style={{margin: '10rem auto'}}>
+            <div style={{ textAlign: 'center', margin: '0 0 3em 0' }}>
+                <h1>CREATE A BLOG POST!</h1>
             </div>
             <QuillEditor
                 placeholder={"Hi Lihle! Write something."}

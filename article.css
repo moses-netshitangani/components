@@ -62,14 +62,19 @@
 
 .article-inner-container img{
     margin-bottom: 5%;
+    max-height: 15em;
 }
 
 .article-inner-container p{
-    margin: 1.5%;
+    margin: 1%;
     line-height: 150%;
     white-space: pre-line;
     color: rgb(75, 80, 80);
     padding: 0% 2%;
+}
+
+.article-inner-container em{
+    color:rgb(75, 80, 80);
 }
 
 

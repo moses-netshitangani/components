@@ -37,6 +37,7 @@ function CreatePage(props) {
         content = "";
     }
 
+    // styling for the submit button
     let submit_btn_style = {
         width: '15em',
         height: '2.5em',
@@ -45,6 +46,27 @@ function CreatePage(props) {
         color: 'white',
         fontSize: '1em',
         border: '0px solid transparent'
+    }
+
+    // styling for the input field cover
+    let input_container = {
+        display: 'block',
+        margin: '2.5em auto auto auto',
+        width: '16em',
+        height: '3em',
+        padding: '0.5em 0',
+        display: 'flex'
+    }
+
+    // styling for the input field
+    let input_style = {
+        outline: 'none',
+        width: '12em',
+        height: '2.25em',
+        padding: '0 0.5em',
+        border: '2px solid black',
+        borderRadius: '15px',
+        display: 'block'
     }
 
     return (
@@ -58,14 +80,14 @@ function CreatePage(props) {
                 onFilesChange={onFilesChange}
             />
 
+            <div style={input_container}>
+                <h2>Topic:</h2>
+                <input type='text' style={input_style} required></input>
+            </div>
+
             <form onSubmit={onSubmit}>
                 <div style={{ textAlign: 'center', margin: '2rem'}}>
-                    <button
-                        onSubmit={onSubmit}
-                        style={submit_btn_style}
-                    >
-                        Submit
-                </button>
+                    <button onSubmit={onSubmit} style={submit_btn_style}>Submit</button>
                 </div>
             </form>
         </div>

@@ -122,20 +122,20 @@
 
     /* placing the outer container just below the navbar and topic headings */
     .outer-container {
-        /* position: relative; */
-        /* top: 2.5em; */
-        display: flex;
+        /* display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         padding: 3% 1.25% 0 1.25%;
         background-color: #f3f3f3;
     }
 
     /* rearranging posts */
     .link{
-        width: 48%;
-        height: 18em;
-        margin-bottom: 2em;
+        width: 90%;
+        height: 20em;
+        margin-bottom: 3em;
         position: relative;
     }
 
@@ -175,7 +175,7 @@
 
     /* for layout purposes */
     .fill-space{
-        width: 44em;
+        width: 63%;
         height: 0px;
     }
 }

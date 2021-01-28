@@ -12,6 +12,7 @@ function CreatePage(props) {
 
     let [content, setContent] = useState("");
     let [files, setFiles] = useState([]);
+    let [topic, setTopic] = useState("");
 
     const onEditorChange = (value) => {
         setContent(value);
@@ -21,15 +22,17 @@ function CreatePage(props) {
         setFiles(files);
     }
 
+    const onTopicChange = value => {
+        setContent(value);
+    }
+
     const onSubmit = (event) => {
         event.preventDefault();
-
-        // setContent("");
+        // event.persist();
 
         const variables = {
             content: content
         }
-
         axios.post('http://localhost:3000/articles/add', variables)
             .then(res => console.log(res))
             .catch(err => console.log(err));
@@ -45,7 +48,9 @@ function CreatePage(props) {
         backgroundImage: 'linear-gradient(to right, orange, #c93655)',
         color: 'white',
         fontSize: '1em',
-        border: '0px solid transparent'
+        border: '0px solid transparent',
+        outline: 'none',
+        cursor: 'pointer'
     }
 
     // styling for the input field cover
@@ -66,7 +71,9 @@ function CreatePage(props) {
         padding: '0 0.5em',
         border: '2px solid black',
         borderRadius: '15px',
-        display: 'block'
+        display: 'block',
+        textAlign: 'center',
+        textTransform: 'capitalize'
     }
 
     return (
@@ -80,13 +87,21 @@ function CreatePage(props) {
                 onFilesChange={onFilesChange}
             />
 
-            <div style={input_container}>
+            {/* Topic input field */}
+            {/* <div style={input_container}>
                 <h2>Topic:</h2>
-                <input type='text' style={input_style} required></input>
-            </div>
+                <input type='text' style={input_style} onChange={onTopicChange} required></input>
+            </div> */}
 
             <form onSubmit={onSubmit}>
                 <div style={{ textAlign: 'center', margin: '2rem'}}>
+
+                    {/* Topic input field
+                    <div style={input_container}>
+                        <h2>Topic:</h2>
+                        <input type='text' style={input_style} onChange={onTopicChange} required></input>
+                    </div> */}
+
                     <button onSubmit={onSubmit} style={submit_btn_style}>Submit</button>
                 </div>
             </form>

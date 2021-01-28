@@ -324,7 +324,7 @@ a{
 
     .topic-parent a:hover{
         border-bottom: 2.5px solid #c93655;
-        animation: widen 0.5s ease-in;
+        animation: widen 0.5s ease;
     }
 
     #topic-child {

@@ -146,12 +146,22 @@
     .post-container{
         margin: 0 auto;
         height: 100%;
+        width: 28em;
         padding: 1.5em;
-        border-radius: 1.25em;
+        border-radius: 0.75em;
         background-color: white;
     }
 
-    .post-container h3{
+    .article{
+        z-index: 9;
+    }
+
+    .article h2, .article p {
+        display: initial;
+    }
+    
+
+    /* .post-container h3{
         font-size: 1.75em;
     }
 
@@ -167,7 +177,7 @@
         font-size: 1.25em;
         -webkit-line-clamp: 5;
         color: #575454;
-    }
+    } */
 
     #article-img{
         margin-left: 0.5em;

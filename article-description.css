@@ -122,18 +122,18 @@
 
     /* placing the outer container just below the navbar and topic headings */
     .outer-container {
-        /* display: flex;
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap; */
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        flex-wrap: wrap;
+        /* display: grid; */
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
         padding: 3% 1.25% 0 1.25%;
         background-color: #f3f3f3;
     }
 
     /* rearranging posts */
     .link{
-        width: 90%;
+        /* width: 90%; */
         height: 20em;
         margin-bottom: 3em;
         position: relative;
@@ -145,19 +145,42 @@
 
     .post-container{
         margin: 0 auto;
+        padding: 0;
         height: 100%;
-        width: 28em;
-        padding: 1.5em;
-        border-radius: 0.75em;
+        width: 20em;
+        border-radius: 0.6em;
         background-color: white;
     }
 
     .article{
+        display: flex;
+        flex-direction: column;
         z-index: 9;
     }
 
-    .article h2, .article p {
+    .article img{
+        height: 60%;
+        width: 100%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        order: 1;
+    }
+
+    .article h1{
+        font-size: 1.25em;
+        background-color: aqua;
+        order: 2;
+    }
+
+    .article p{
+        background: teal;
+        font-size: 1.25em;
+        order: 3;
+    }
+
+    .article h1:first-of-type , .article p:first-of-type {
         display: initial;
+        position: initial;
     }
     
 

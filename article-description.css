@@ -156,7 +156,7 @@
         flex-direction: column;
         box-shadow: 0 0.188em 1.550em -0.525em rgb(156, 156, 156);
         transition: transform 0.5s;
-        z-index: 9;
+        z-index: 1;
     }
 
     .article:hover{

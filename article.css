@@ -110,15 +110,16 @@
     .article-inner-container p{
         font-size: 1.5em;
         padding: 0;
-        letter-spacing: 0.025em;
+        letter-spacing: 0.01em;
     }
 
     .article-inner-container em{
         color: #29292e;
+        font-size: 0.8em;
     }
 
     #disqus_thread{
-        width: 50%;
+        width: 45%;
         margin: 12em auto;
     }
 

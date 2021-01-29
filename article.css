@@ -92,14 +92,13 @@
 
     .article-inner-container img {
         max-width: 80%;
-        min-height: 16em;
-        max-height: 18em;
+        min-height: 18em;
     }
 
     .article-inner-container img:first-of-type{
         min-width: 100%;
         min-height: 18em;
-        max-height: 24em;
+        max-height: 28em;
     }
 
     .article-inner-container h1{

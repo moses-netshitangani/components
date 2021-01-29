@@ -37,6 +37,12 @@ const Navbar = props => {
         updateSlide(menu);
     }
 
+    // display the login component in mobile
+    let mobileLogin = () => {
+        updateMenu();
+        openLogin();
+    }
+
     // admin login variables
     let [username, setName] = useState("");
     let [password, setPassword] = useState("");
@@ -111,9 +117,9 @@ const Navbar = props => {
                             {/* admin username and password */}
                             <div className='admin-details'>
                                 <h4>Username</h4>
-                                <input type='text' name='email' placeholder='Type your username' onChange={changeName} id='email' />
+                                <input type='text' name='email' placeholder='Type in your username' onChange={changeName} id='email' required/>
                                 <h4>Password</h4>
-                                <input type="text" name="password" placeholder="Type your password" onChange={changePassword} id="password" />
+                                <input type="text" name="password" placeholder="Type in your password" onChange={changePassword} id="password" required/>
                             </div>
                             <input type='submit' className='submit-button' value="Login"/>
                         </form>
@@ -135,6 +141,9 @@ const Navbar = props => {
                 </Link>
                 <Link to="/contact" onClick={updateMenu}>
                     <h4>Contact</h4>
+                </Link>
+                <Link onClick={mobileLogin}>
+                    <h4>Admin Sign in</h4>
                 </Link>
             </div>
         </div>

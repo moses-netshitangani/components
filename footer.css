@@ -80,11 +80,13 @@
     .social-icons div {
         height: 80%;
         width: 4em;
+        transition: transform 0.5s;
     }
 
     .social-icons div:hover {
         cursor: pointer;
         background-color: #c93655;
+        transform: scale(1.15);
     }
 
     .copyright p {

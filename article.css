@@ -86,8 +86,43 @@
 /* Desktop optimization */
 @media only screen and (min-device-width: 64em){
 
-    .heading{
-        /* background-color: blue; */
+    .article-inner-container{
+        width: 45%;
+    }
+
+    .article-inner-container img {
+        max-width: 80%;
+        min-height: 16em;
+        max-height: 18em;
+    }
+
+    .article-inner-container img:first-of-type{
+        min-width: 100%;
+        min-height: 18em;
+        max-height: 24em;
+    }
+
+    .article-inner-container h1{
+        font-size: 3.5em;
+        margin: 0.75em 0 0.25em 0;
+    }
+
+    .article-inner-container p{
+        font-size: 1.5em;
+        padding: 0;
+        letter-spacing: 0.025em;
+    }
+
+    .article-inner-container em{
+        color: #29292e;
+    }
+
+    #disqus_thread{
+        width: 50%;
+        margin: 12em auto;
+    }
+
+    /* .heading{
         width: 60%;
         display: inline-block;
         font-size: 4.75em;
@@ -95,15 +130,13 @@
     }
 
     .article-img{
-        /* background-color: blue; */
         width: 60%;
         height: 30em;
         margin: 0;
         display: inline-block;
-    }
+    } */
 
-    .author-date{
-        /* background: green; */
+    /* .author-date{
         width: 60%;
         display: inline-block;
         font-size: larger;
@@ -115,7 +148,6 @@
     }
 
     .full-content{
-        /* background-color: blue; */
         width: 60%;
         padding: 2% 2%;
         font-size: 1.5em;
@@ -124,6 +156,6 @@
     #disqus_thread{
         width: 60%;
         display: inline-block;
-    }
+    } */
 }
 /* End of desktop optimization */

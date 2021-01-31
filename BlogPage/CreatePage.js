@@ -82,7 +82,12 @@ function CreatePage(props) {
                 <h1>CREATE A BLOG POST!</h1>
             </div>
             <QuillEditor
-                placeholder={"Hi Lihle! Write something."}
+                placeholder={"Hi Lihle! Write something."
+                +"\nTips:"
+                +"\n-Select the 'Heading 1' option and write your headings in all CAPS."
+                +"\n-Make sure each post is accompanied by an image, or multiple."
+                +"\nGeneral format:"
+                +"\n-Heading, Image, Author name | Date (in italics), Skip line, Content."}
                 onEditorChange={onEditorChange}
                 onFilesChange={onFilesChange}
             />

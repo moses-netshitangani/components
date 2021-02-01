@@ -110,6 +110,7 @@
         font-size: 1.5em;
         padding: 0;
         letter-spacing: 0.01em;
+        line-height: 1.5em;
     }
 
     .article-inner-container em{

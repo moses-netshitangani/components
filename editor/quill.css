@@ -1,11 +1,15 @@
 /* Mobile version */
+p, h1, em{
+    display: block;
+}
 .quill-cover {
     z-index: 1;
     width: 100%;
 }
 
 .ql-editor{
-    min-height: 10em;
+    min-height: 15em;
+    font-size: 1.25em;
 }
 
 /* desktop version */

@@ -25,7 +25,29 @@
 
 
 
-/* Desktop optimization */
+/* ---------------------TABLET OPTIMIZATION------------------------*/
+
+@media only screen and (min-device-width: 37em) {
+    .about-container {
+        width: 70%;
+    }
+
+    .about-content{
+        margin: 2em 0;
+    }
+
+    .about-heading {
+        font-size: 2em;
+    }
+
+    .about-content p {
+        font-size: 1.25em;
+    }
+}
+
+
+/* ---------------------DESKTOP OPTIMIZATION------------------------*/
+
 @media only screen and (min-device-width: 64em)
 {
     .about-container{

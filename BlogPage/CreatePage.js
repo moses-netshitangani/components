@@ -3,19 +3,25 @@ import React, { useEffect, useState } from 'react'
 import QuillEditor from '../editor/QuillEditor';
 // import { Typography, Button, Form, message } from 'antd';
 import axios from 'axios';
+import Quill from 'quill';
 // import { useSelector } from "react-redux";
 
 // const { Title } = Typography;
 
 function CreatePage(props) {
-    // const user = useSelector(state => state.user);
 
-    let [content, setContent] = useState("");
+    // let [content, setContent] = useState("");
+    let content = "";
+    let topic = "";
     let [files, setFiles] = useState([]);
-    let [topic, setTopic] = useState("");
+    // let [topic, setTopic] = useState("");
 
     const onEditorChange = (value) => {
-        setContent(value);
+        // console.log(`value received: ${value}`);
+        // console.log(`content before: ${content}`);
+        content = value;
+        // console.log("content after: "+content);
+        
     }
 
     const onFilesChange = (files) => {
@@ -23,21 +29,27 @@ function CreatePage(props) {
     }
 
     const onTopicChange = value => {
-        setContent(value);
+        topic = value;
+        console.log(topic);
     }
 
     const onSubmit = (event) => {
         event.preventDefault();
-        // event.persist();
 
         const variables = {
-            content: content
+            content: content,
+            topic: topic
         }
         axios.post('http://localhost:3000/articles/add', variables)
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
-
-        content = "";
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err);
+                alert("Post failed to upload.");
+            })
+        
+        // window.location = "/";
     }
 
     // styling for the submit button
@@ -84,7 +96,7 @@ function CreatePage(props) {
             <QuillEditor
                 placeholder={"Hi Lihle! Write something."
                 +"\nTips:"
-                +"\n-Select the 'Heading 1' option and write your headings in all CAPS."
+                +"\n-Select the 'Heading 1' option and write your heading in all CAPS."
                 +"\n-Make sure each post is accompanied by an image, or multiple."
                 +"\nGeneral format:"
                 +"\n-Heading, Image, Author name | Date (in italics), Skip line, Content."}
@@ -92,22 +104,16 @@ function CreatePage(props) {
                 onFilesChange={onFilesChange}
             />
 
-            {/* Topic input field */}
-            {/* <div style={input_container}>
-                <h2>Topic:</h2>
-                <input type='text' style={input_style} onChange={onTopicChange} required></input>
-            </div> */}
-
             <form onSubmit={onSubmit}>
                 <div style={{ textAlign: 'center', margin: '2rem'}}>
 
-                    {/* Topic input field
+                    {/* Topic input field */}
                     <div style={input_container}>
                         <h2>Topic:</h2>
                         <input type='text' style={input_style} onChange={onTopicChange} required></input>
-                    </div> */}
+                    </div>
 
-                    <button onSubmit={onSubmit} style={submit_btn_style}>Submit</button>
+                    <input type='submit' value='Submit' style={submit_btn_style}></input>
                 </div>
             </form>
         </div>

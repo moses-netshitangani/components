@@ -98,7 +98,7 @@
     .article-inner-container img:first-of-type{
         min-width: 100%;
         min-height: 18em;
-        max-height: 28em;
+        max-height: 32em;
     }
 
     .article-inner-container h1{
@@ -110,7 +110,7 @@
         font-size: 1.5em;
         padding: 0;
         letter-spacing: 0.01em;
-        line-height: 1.5em;
+        line-height: 1.2em;
     }
 
     .article-inner-container em{

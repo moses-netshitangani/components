@@ -63,7 +63,7 @@
 }
 
 .article img, .article iframe, .article video{
-    width: 30%;
+    width: 35%;
     height: 100%;
     border-radius: 5px;
     margin: 0;
@@ -79,7 +79,7 @@
     display: none;
 }
 
-.article h2:first-of-type, .article p:first-of-type{
+.article p:first-of-type{
     display: initial;
     font-size: 0.775em;
     margin: 0.25em;
@@ -102,6 +102,7 @@
 .article h1{
     font-size: 1em;
     margin: 0.25em;
+    width: 65%;
     /* max number of lines is 4 */
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -167,20 +168,21 @@
     }
 
     .article img{
-        height: 65%;
+        height: 70%;
         width: 100%;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
         order: 1;
     }
 
-    .article br{
+    .article p br{
         display: none;
     }
 
     .article h1{
         font-size: 1.3em;
         order: 2;
+        height: 3.5em;
     }
 
     .article p{

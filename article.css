@@ -81,9 +81,31 @@
 
 /* End of mobile */
 
+/* ---------------------TABLET OPTIMIZATION------------------------*/
+@media only screen and (min-device-width: 37em){
+
+    .article-inner-container{
+        width: 70%;
+    }
+
+    .article-inner-container h1 {
+        margin: 1.25em 0 0.5em 0;
+    }
+
+    .article-inner-container p {
+        font-size: 1.25em;
+        padding: 0;
+    }
+
+    #disqus_thread {
+        margin: 15%;
+    }
+}
 
 
-/* Desktop optimization */
+
+/* ---------------------DESKTOP OPTIMIZATION------------------------*/
+
 @media only screen and (min-device-width: 64em){
 
     .article-inner-container{

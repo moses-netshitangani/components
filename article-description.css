@@ -63,7 +63,7 @@
 }
 
 .article img, .article iframe, .article video{
-    width: 35%;
+    width: 8em;
     height: 100%;
     border-radius: 5px;
     margin: 0;
@@ -114,10 +114,37 @@
     /* flex: 2; */
 }
 
+/*-----------------------------TABLET OPTIMIZATION----------------------------*/
+@media only screen and (min-device-width: 37em) {
+    
+    /* posts have a grid layout */
+    .outer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0em 0.5em;
+    }
+    
+
+    .post-container {
+        height: 8em;
+    }
+
+    .post-container h1{
+        /* max number of lines is 6 */
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-weight: bolder;
+    }
+
+    .post-container img{
+        width: 40%;
+    }
+}
 
 
-
-/* styling for desktop */
+/*-----------------------------DESKTOP OPTIMIZATION---------------------------*/
 
 @media only screen and (min-device-width: 64em) {
 

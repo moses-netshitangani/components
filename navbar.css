@@ -384,9 +384,12 @@ a{
     }
 
     .login-icon{
-        width: 2.5%;
+        width: 3%;
         height: 60%;
         margin: 0 2%;
+        background-image: url('../imgs/user\ icon.png');
+        background-position: center;
+        background-size: cover;
     }
 
     .login-grey{
@@ -437,6 +440,8 @@ a{
 
     /*---------------------Home Topics---------------*/
     .topic-outer {
+        flex: 0.75;
+        font-size: 1em;
         width: 100%;
         border-radius: 0%;
         box-shadow: 0 0.188em 1.550em -0.525em rgb(114, 114, 114);

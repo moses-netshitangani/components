@@ -113,15 +113,15 @@ const Navbar = props => {
                         <div className="cancel-btn" onClick={closeLogin}></div>
                         <h3>Admin Login</h3>
 
+                        {/* admin username and password */}
                         <form onSubmit={onSubmit}>
-                            {/* admin username and password */}
                             <div className='admin-details'>
                                 <h4>Username</h4>
-                                <input type='text' name='email' placeholder='Type in your username' onChange={changeName} id='email' required/>
+                                <input type='text' name='email' placeholder='Type in your username' onChange={changeName} id='email' required />
                                 <h4>Password</h4>
-                                <input type="text" name="password" placeholder="Type in your password" onChange={changePassword} id="password" required/>
+                                <input type="text" name="password" placeholder="Type in your password" onChange={changePassword} id="password" required />
                             </div>
-                            <input type='submit' className='submit-button' value="Login"/>
+                            <input type='submit' className='submit-button' value="Login" />
                         </form>
                     </div>
                 </div>
@@ -139,9 +139,6 @@ const Navbar = props => {
                 <Link to="/about" onClick={updateMenu}>
                     <h4>About Me</h4>
                 </Link>
-                <Link to="/contact" onClick={updateMenu}>
-                    <h4>Contact</h4>
-                </Link>
                 <Link onClick={mobileLogin}>
                     <h4>Admin Sign in</h4>
                 </Link>
@@ -149,5 +146,6 @@ const Navbar = props => {
         </div>
     )
 }
+
 
 export default Navbar;

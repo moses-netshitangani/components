@@ -283,11 +283,59 @@ a{
 
 
 
+
+/* ----------------------------------------------------
+                    TABLET VERSION
+---------------------------------------------------- */
+@media only screen and (min-device-width: 37em) {
+
+    .login-page {
+        height: 24em;
+        width: 18em;
+        border-radius: 20px;
+        font-size: 1.5em;
+    }
+
+    .login-page h3 {
+        margin-top: 1em;
+    }
+
+    .cancel-btn {
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .admin-details h4 {
+        margin: 2em 0 0 0;
+    }
+
+    .admin-details input {
+        height: 3em;
+        width: 20em;
+        font-size: 0.75em;
+        border: none;
+        border-bottom: 2px solid #c93655;
+        outline: none;
+    }
+
+    .submit-button {
+        height: 2.5em;
+    }
+}
+/* ----------------------------------------------------
+                END OF TABLET VERSION
+---------------------------------------------------- */
+
+
+
+
 /* ----------------------------------------------------
                     DESKTOP VERSION
 ---------------------------------------------------- */
 @media only screen and (min-device-width: 64em) {
-
+    
     /*-----------------------Navbar------------------*/
     .logo-cover{
         height: 10em;
@@ -312,35 +360,16 @@ a{
         width: 2.5%;
         height: 60%;
         margin: 0 2%;
-        background-image: url("../imgs/user icon.png");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
     }
 
-    .login-grey-inactive{
-        display: none;
-        z-index: 99;
-    }
     .login-grey{
-        display: inline-block;
-        padding-top: 8em;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: #000000b4;
-        z-index: 9;
+        padding-top: 7em;
     }
     .login-page{
-        display: flex;
-        flex-direction: column;
         height: 24em;
         width: 18em;
-        background-color: white;
         border-radius: 20px;
         font-size: 1.5em;
-        animation: popup 2s;
-        animation-fill-mode: forwards;
     }
 
     .login-page h3{
@@ -350,10 +379,6 @@ a{
     .cancel-btn{
         width: 1.5em;
         height: 1.5em;
-        background-image: url("../imgs/cancel.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         margin-right: 0.5em;
         margin-top: 0.5em;
     }

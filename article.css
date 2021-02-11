@@ -1,4 +1,4 @@
-/* Mobile version */
+/* ---------------------MOBILE OPTIMIZATION------------------------*/
 
 .article-outer-container{
     text-align: center;
@@ -79,13 +79,19 @@
 }
 
 
-/* End of mobile */
-
 /* ---------------------TABLET OPTIMIZATION------------------------*/
 @media only screen and (min-device-width: 37em){
 
     .article-inner-container{
         width: 70%;
+    }
+
+    .article-inner-container img {
+        min-height: 18em;
+    }
+
+    .article-inner-container img:first-of-type {
+        min-height: 20em;
     }
 
     .article-inner-container h1 {

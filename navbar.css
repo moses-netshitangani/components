@@ -290,10 +290,10 @@ a{
 @media only screen and (min-device-width: 37em) {
 
     .login-page {
-        height: 24em;
+        margin-top: 1.75em;
         width: 18em;
         border-radius: 20px;
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
     .login-page h3 {
@@ -323,6 +323,33 @@ a{
     .submit-button {
         height: 2.5em;
     }
+
+    .drawer {
+        top: 6em;
+    }
+
+    .drawer.long {
+        font-size: 1.25em;
+    }
+
+    .drawer.long a h4 {
+        color: #1f1e1e;
+    }
+
+    .nav-container {
+        height: 8em;
+    }
+
+    .logo-cover {
+        height: 5em;
+        width: 15em;
+    }
+
+    .topic-outer {
+        font-size: 1.15em;
+        flex: 0.65;
+    }
+
 }
 /* ----------------------------------------------------
                 END OF TABLET VERSION

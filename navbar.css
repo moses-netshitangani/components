@@ -384,8 +384,8 @@ a{
     }
 
     .login-icon{
-        width: 3%;
-        height: 60%;
+        width: 45px;
+        height: 45px;
         margin: 0 2%;
         background-image: url('../imgs/user\ icon.png');
         background-position: center;

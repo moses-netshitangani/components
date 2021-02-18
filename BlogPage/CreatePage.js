@@ -1,35 +1,25 @@
 import React, { useEffect, useState } from 'react'
-
 import QuillEditor from '../editor/QuillEditor';
-// import { Typography, Button, Form, message } from 'antd';
 import axios from 'axios';
 import Quill from 'quill';
 // import { useSelector } from "react-redux";
 
-// const { Title } = Typography;
-
 function CreatePage(props) {
 
-    // let [content, setContent] = useState("");
     let content = "";
     let topic = "";
     let [files, setFiles] = useState([]);
-    // let [topic, setTopic] = useState("");
 
     const onEditorChange = (value) => {
-        // console.log(`value received: ${value}`);
-        // console.log(`content before: ${content}`);
         content = value;
-        // console.log("content after: "+content);
-        
     }
 
     const onFilesChange = (files) => {
         setFiles(files);
     }
 
-    const onTopicChange = value => {
-        topic = value;
+    const onTopicChange = (value) => {
+        topic = document.getElementById('tpc').value;
         console.log(topic);
     }
 
@@ -43,13 +33,14 @@ function CreatePage(props) {
         axios.post('http://localhost:3000/articles/add', variables)
             .then(res => {
                 console.log(res);
+                alert('Post successfully uploaded.')
             })
             .catch(err => {
                 console.log(err);
                 alert("Post failed to upload.");
             })
         
-        // window.location = "/";
+        window.location = "/";
     }
 
     // styling for the submit button
@@ -110,7 +101,7 @@ function CreatePage(props) {
                     {/* Topic input field */}
                     <div style={input_container}>
                         <h2>Topic:</h2>
-                        <input type='text' style={input_style} onChange={onTopicChange} required></input>
+                        <input type='text' id='tpc' style={input_style} onChange={onTopicChange} required></input>
                     </div>
 
                     <input type='submit' value='Submit' style={submit_btn_style}></input>

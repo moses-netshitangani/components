@@ -6,7 +6,8 @@ export const BlogContext = createContext();
 export const BlogArticles = (props) => {
     // topics
     let topic = "";
-    const topic_list = ['News', 'Lifestyle', 'Fashion', 'Other'];
+    const topic_list = ['News', 'Lifestyle', 'Fashion', 'Other',
+                        'news', 'lifestyle', 'fashion', 'other'];
 
     // controllers
     let all_ctrl = false;

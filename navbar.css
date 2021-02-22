@@ -444,7 +444,7 @@ a{
         font-size: 1em;
         width: 100%;
         border-radius: 0%;
-        box-shadow: 0 0.188em 1.550em -0.525em rgb(114, 114, 114);
+        box-shadow: 0 0.188em 1.25em -0.525em rgb(163, 161, 161);
     }
 
     .topic-parent {

@@ -74,10 +74,14 @@
     font-size: 1.05em;
 }
 
-.article-inner-container em{
-    color:rgb(75, 80, 80);
+.article-inner-container h2 {
+    font-size: 1.5em;
+    margin: 3%;
 }
 
+.article-inner-container em, h2{
+    color:rgb(75, 80, 80);
+}
 
 /* ---------------------TABLET OPTIMIZATION------------------------*/
 @media only screen and (min-device-width: 37em){
@@ -96,6 +100,11 @@
 
     .article-inner-container h1 {
         margin: 1.25em 0 0.5em 0;
+    }
+
+    .article-inner-container h2 {
+        font-size: 1.75em;
+        margin: 1% 1% 2% 1%;
     }
 
     .article-inner-container p {
@@ -132,6 +141,11 @@
     .article-inner-container h1{
         font-size: 3.5em;
         margin: 0.75em 0 0.25em 0;
+    }
+
+    .article-inner-container h2 {
+        font-size: 2.25em;
+        margin: 1% 1% 2% 1%;
     }
 
     .article-inner-container p{

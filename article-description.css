@@ -253,7 +253,8 @@
 
     /* for layout purposes */
     .fill-space{
-        width: 63%;
-        height: 0px;
+        width: 20em;
+        height: 10px;
+        border: 2px soild black;
     }
 }

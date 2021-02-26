@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './navbar.css';
+import axios from 'axios';
 
 const Navbar = props => {
     // menu variable to hold state for the burger-bar
@@ -69,7 +70,17 @@ const Navbar = props => {
 
     // submitting login details
     const onSubmit = e => {
+        e.preventDefault(); 
 
+        console.log(`username being uploaded: ${username}`);
+        const user = {
+            username: username,
+            password: password
+        }
+
+        axios.post('http://localhost:3000/user/add', user)
+            .then(res => console.log(`com response: ${res}`))
+            .catch(err => console.log(err));
     }
 
     return(

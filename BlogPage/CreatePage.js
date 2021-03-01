@@ -107,9 +107,11 @@ function CreatePage() {
                 <button onClick={goBack}>OK</button>
             </div>
             
+            {/* Quill editor */}
             <div style={{ textAlign: 'center', margin: '0 0 3em 0' }}>
                 <h1>CREATE A BLOG POST!</h1>
             </div>
+
             <QuillEditor
                 placeholder={"Hi Lihle! Write something."
                 +"\nTips:"
@@ -121,10 +123,11 @@ function CreatePage() {
                 onFilesChange={onFilesChange}
             />
 
+            {/* Topic input */}
             <form onSubmit={onSubmit}>
                 <div style={{ textAlign: 'center', margin: '2rem'}}>
 
-                    {/* Topic input field */}
+                    {/* input field */}
                     <div style={input_container}>
                         <h2>Topic:</h2>
                         <input type='text' id='tpc' style={input_style} onChange={onTopicChange} required></input>

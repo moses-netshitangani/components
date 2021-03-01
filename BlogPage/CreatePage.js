@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import QuillEditor from '../editor/QuillEditor';
 import axios from 'axios';
-import Quill from 'quill';
-// import { useSelector } from "react-redux";
+import './create.css';
 
-function CreatePage(props) {
+function CreatePage() {
 
     let content = "";
     let topic = "";
     let [files, setFiles] = useState([]);
+    let [post_status, setStatus] = useState("Post successful!");
+    let [popup, setPopup] = useState("popup_off");
+
 
     const onEditorChange = (value) => {
         content = value;
@@ -18,11 +20,24 @@ function CreatePage(props) {
         setFiles(files);
     }
 
-    const onTopicChange = (value) => {
+    const onTopicChange = () => {
         topic = document.getElementById('tpc').value;
         console.log(topic);
     }
 
+    // reverting back to the home page
+    const goBack = () => {
+        if(post_status === "Post successful!") {
+            window.location = "/";
+        }
+        else
+        {
+            // destroy pop up
+            setPopup("popup_off");
+        }
+    }
+    
+    // submitting a blog post
     const onSubmit = (event) => {
         event.preventDefault();
 
@@ -32,21 +47,23 @@ function CreatePage(props) {
         }
         axios.post('http://localhost:3000/articles/add', variables)
             .then(res => {
-                console.log(res);
-                alert('Post successfully uploaded.')
+                setStatus("Post successful!");
+                setPopup("popup_on popup_success");
             })
             .catch(err => {
                 console.log(err);
-                alert("Post failed to upload.");
+                setStatus('Post upload failed.');
+                setPopup("popup_on popup_fail");
             })
         
-        window.location = "/";
     }
+
 
     // styling for the submit button
     let submit_btn_style = {
         width: '15em',
         height: '2.5em',
+        marginTop: '1em',
         borderRadius: '15px',
         backgroundImage: 'linear-gradient(to right, orange, #c93655)',
         color: 'white',
@@ -71,6 +88,7 @@ function CreatePage(props) {
         outline: 'none',
         width: '12em',
         height: '2.25em',
+        fontSize: '1em',
         padding: '0 0.5em',
         border: '2px solid black',
         borderRadius: '15px',
@@ -79,8 +97,16 @@ function CreatePage(props) {
         textTransform: 'capitalize'
     }
 
+
     return (
         <div style={{margin: '10rem auto'}}>
+            
+            {/* Post Success/Fail pop up */}
+            <div className={popup}>
+                <h2>{post_status}</h2>
+                <button onClick={goBack}>OK</button>
+            </div>
+            
             <div style={{ textAlign: 'center', margin: '0 0 3em 0' }}>
                 <h1>CREATE A BLOG POST!</h1>
             </div>

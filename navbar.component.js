@@ -72,14 +72,19 @@ const Navbar = props => {
     const onSubmit = e => {
         e.preventDefault(); 
 
-        console.log(`username being uploaded: ${username}`);
         const user = {
             username: username,
             password: password
-        }
+        };
 
         axios.post('http://localhost:3000/user/add', user)
-            .then(res => console.log(`com response: ${res}`))
+            .then(res => {
+                console.log(`This is the result: ${res.data}`);
+                // hide the login icon
+                document.getElementsByClassName('logo-cover')[0].style.display = 'none';
+                // close the login page
+                closeLogin();
+            })
             .catch(err => console.log(err));
     }
 

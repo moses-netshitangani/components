@@ -80,8 +80,10 @@ const Navbar = props => {
         axios.post('http://localhost:3000/user/add', user)
             .then(res => {
                 console.log(`This is the result: ${res.data}`);
+
                 // hide the login icon
-                document.getElementsByClassName('logo-cover')[0].style.display = 'none';
+                document.getElementsByClassName('login-icon')[0].style.display = 'none';
+                
                 // close the login page
                 closeLogin();
             })
@@ -90,6 +92,7 @@ const Navbar = props => {
 
     return(
         <div style={{width: '100%'}}>
+
             {/* The navbar with the burger-menu */}
             <div className='nav-container'>
                 <nav>
@@ -99,15 +102,18 @@ const Navbar = props => {
                         </Link> 
                     </div>
                     
+                    {/* The admin login icon */}
                     <div className="login-icon" onClick={openLogin}>
                     </div>
 
+                    {/* The burger menu */}
                     <div className="burger" onClick={updateMenu}>
                         <div className={burger_classes}></div>
                         <div className={burger_classes}></div>
                         <div className={burger_classes}></div>
                     </div>
                 </nav>
+
                 {/* home topics */}
                 <div className='topic-outer'>
                     <div className='topic-parent'>

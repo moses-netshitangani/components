@@ -51,11 +51,11 @@ const Navbar = props => {
 
     // capturing username and password
     const changeName = e => {
-        setName(e.target.value);
+        setName(e.target.value.trim());
     }
 
     const changePassword = e => {
-        setPassword(e.target.value);
+        setPassword(e.target.value.trim());
     }
 
     // opening the admin login page
@@ -68,24 +68,52 @@ const Navbar = props => {
         setStatus("login-grey-inactive");
     }
 
-    // submitting login details
-    const onSubmit = e => {
-        e.preventDefault(); 
+    // // submitting login details
+    // const onSubmit = e => {
+    //     e.preventDefault(); 
 
-        const user = {
-            username: username,
-            password: password
-        };
+    //     const user = {
+    //         username: username,
+    //         password: password
+    //     };
 
-        axios.post('http://localhost:3000/user/add', user)
-            .then(res => {
-                console.log(`This is the result: ${res.data}`);
+    //     axios.post('http://localhost:3000/user/add', user)
+    //         .then(res => {
+    //             console.log(`This is the result: ${res.data}`);
 
-                // hide the login icon
-                document.getElementsByClassName('login-icon')[0].style.display = 'none';
+    //             // hide the login icon
+    //             document.getElementsByClassName('login-icon')[0].style.display = 'none';
                 
-                // close the login page
-                closeLogin();
+    //             // close the login page
+    //             closeLogin();
+    //         })
+    //         .catch(err => console.log(err));
+    // }
+
+    // checking admin username and password
+    const onSubmit = e => {
+        e.preventDefault();
+
+        // admin details
+        let admin = {
+            username: "",
+            password: ""
+        }
+
+        // fetch username and pasword
+        axios.get('http://localhost:3000/user')
+            .then(res => {
+                admin.username = res.data[0].username;
+                admin.password = res.data[0].password;
+
+                // check for correctness
+                if(admin.password === password 
+                    && admin.username === username) {
+                        console.log("details correct");
+                }
+                else {
+                    console.log('Meh incorrect details');
+                }
             })
             .catch(err => console.log(err));
     }

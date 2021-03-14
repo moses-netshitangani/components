@@ -13,9 +13,15 @@ const Footer = () => {
         <div className="footer-container">
             <div className="footer-logo img"></div>
             <div className="social-icons">
-                <div className="insta img"></div>
-                <div className="twitter img"></div>
-                <div className="email img"></div>
+                <a href="https://www.instagram.com/KenichiVasco/">
+                    <div className="insta img"></div>
+                </a>
+                <a href="https://www.twitter.com/KenichiVasco">
+                    <div className="twitter img"></div>
+                </a>
+                <a href="mailto:Vascomanagement4@gmail.com">
+                    <div className="email img"></div>
+                </a>
             </div>
             <div className="copyright">
                 <p>Copyright &copy; 2021 Vasco Media</p>

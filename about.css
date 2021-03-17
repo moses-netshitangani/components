@@ -18,7 +18,13 @@
 }
 
 .about-image{
-    display: none;
+    background-image: url("../imgs/Lih.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 5em;
+    width: 5em;
+    border-radius: 20px;
+    margin: 1em auto;
 }
 
 
@@ -35,6 +41,11 @@
 
     .about-heading {
         font-size: 2em;
+    }
+
+    .about-image {
+        height: 7.5em;
+        width: 8em;
     }
 
     .about-content p {
@@ -57,11 +68,9 @@
     }
     
     .about-image{
-        display: block;
-        height: 5em;
-        width: 5em;
+        height: 9em;
+        width: 10em;
         border-radius: 40px;
-        background-image: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 24, 62));
     }
 
     .about-content{

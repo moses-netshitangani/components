@@ -60,6 +60,15 @@
 }
 /* End of mobile version */
 
+/* Tablet version */
+@media only screen and(min-device-width: 37em) {
+    /* .footer-logo {
+        height: 1em;
+        width: 20%;
+    } */
+}
+/* End of tablet version */
+
 
 /* Desktop optimization */
 @media only screen and (min-device-width: 64em){
@@ -78,8 +87,8 @@
     }
 
     .social-icons div {
-        height: 80%;
-        width: 4em;
+        height: 60%;
+        width: 3em;
         transition: transform 0.5s;
     }
 
@@ -90,7 +99,7 @@
     }
 
     .copyright p {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
     .copyright p:nth-child(3){

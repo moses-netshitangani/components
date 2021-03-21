@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './navbar.css';
 import axios from 'axios';
+const bcrypt = require('bcryptjs');
 
-const Navbar = props => {
+const Navbar = () => {
     // menu variable to hold state for the burger-bar
     let [menu, setMenu] = useState(false);
 
@@ -79,8 +80,6 @@ const Navbar = props => {
 
     //     axios.post('http://localhost:3000/user/add', user)
     //         .then(res => {
-    //             console.log(`This is the result: ${res.data}`);
-
     //             // hide the login icon
     //             document.getElementsByClassName('login-icon')[0].style.display = 'none';
                 
@@ -91,7 +90,7 @@ const Navbar = props => {
     // }
 
     // checking admin username and password
-    const onSubmit = e => {
+    async function onSubmit (e){
         e.preventDefault();
 
         // admin details
@@ -105,11 +104,11 @@ const Navbar = props => {
             .then(res => {
                 admin.username = res.data[0].username;
                 admin.password = res.data[0].password;
-
+                console.log('bout to check for correctness');
                 // check for correctness
-                if(admin.password === password 
-                    && admin.username === username) {
-                        console.log("details correct");
+                if(bcrypt.compare(password, admin.password) &&
+                    (username === admin.username)) {
+                    console.log('passwords match!');
                 }
                 else {
                     console.log('Meh incorrect details');
